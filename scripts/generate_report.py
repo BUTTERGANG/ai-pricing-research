@@ -139,7 +139,7 @@ for provider, recs in by_provider.items():
     report.append("")
 
 # Cross-provider comparison — latest standard_list per provider/model
-report.append("## 7. Cross-provider comparison — current prices (late 2026 snapshot)")
+report.append(f"## {section_num}. Cross-provider comparison — current prices (late 2026 snapshot)")
 report.append("")
 report.append("These are the **latest standard_list price points** for each model as loaded in the KB. Batch, cache, promo, and tiered variants are excluded here for readability; see the per-provider sections above for those.")
 report.append("")

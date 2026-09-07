@@ -357,7 +357,7 @@ Each price entry is presented as a row in a table. The columns are:
 
 ---
 
-## 7. Cross-provider comparison — current prices (late 2026 snapshot)
+## 12. Cross-provider comparison — current prices (late 2026 snapshot)
 
 These are the **latest standard_list price points** for each model as loaded in the KB. Batch, cache, promo, and tiered variants are excluded here for readability; see the per-provider sections above for those.
 
