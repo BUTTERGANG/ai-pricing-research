@@ -2,7 +2,18 @@
 
 ## Dataset
 
-- `price_points.jsonl` — canonical structured dataset (one JSON object per line per price point).
+- `kb/price_points_*.jsonl` — canonical structured datasets (one JSONL file per provider):
+  - `price_points_openai.jsonl` (37 entries, 2020-2026)
+  - `price_points_anthropic.jsonl` (27 entries, 2023-2026)
+  - `price_points_google.jsonl` (31 entries, 2023-2026)
+  - `price_points_deepseek.jsonl` (11 entries, 2023-2026)
+  - `price_points_xai.jsonl` (5 entries, 2025-2026)
+  - `price_points_mistral.jsonl` (TBD)
+  - `price_points_cohere.jsonl` (TBD)
+  - `price_points_meta_llama.jsonl` (TBD — open-weight, hosted pricing)
+  - `price_points_alibaba_qwen.jsonl` (TBD)
+  - `price_points_moonshot_kimi.jsonl` (TBD)
+  - `price_points_openrouter_free.jsonl` (TBD — free-tier models)
 - `PRICE_POINTS_SPEC.md` — field definitions, version-tracking rules, price-type taxonomy, effective-date rules, source attribution, and maintenance conventions.
 - `CONVENTIONS.md` — project-level accuracy instructions (originally supplied by the user).
 

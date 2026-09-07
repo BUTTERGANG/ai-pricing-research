@@ -20,7 +20,7 @@ Historical and current AI model pricing data — LLM API costs, market landscape
 
 ## Current totals
 
-- **116 price points** across 5 providers (OpenAI 37, Anthropic 27, Google 31, DeepSeek 9, xAI 5)
+- **111 price points** across 5 providers (OpenAI 37, Anthropic 27, Google 31, DeepSeek 11, xAI 5)
 - **17 sources** catalogued (provider pricing pages, aggregators, market analysts)
 - Time span: **2020 through projected 2027** (Gemini 3.8 Flash Jan 2027 rate)
 
