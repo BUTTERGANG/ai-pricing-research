@@ -88,7 +88,7 @@ Each price entry is presented as a row in a table. The columns are:
 
 ---
 
-## 1. Anthropic pricing history
+## 2. Anthropic pricing history
 
 **27 price points** loaded from `kb/price_points_anthropic.jsonl`.
 
@@ -124,7 +124,7 @@ Each price entry is presented as a row in a table. The columns are:
 
 ---
 
-## 1. Google / Gemini pricing history
+## 3. Google / Gemini pricing history
 
 **31 price points** loaded from `kb/price_points_google.jsonl`.
 
@@ -164,7 +164,7 @@ Each price entry is presented as a row in a table. The columns are:
 
 ---
 
-## 1. DeepSeek pricing history
+## 4. DeepSeek pricing history
 
 **11 price points** loaded from `kb/price_points_deepseek.jsonl`.
 
@@ -184,7 +184,7 @@ Each price entry is presented as a row in a table. The columns are:
 
 ---
 
-## 1. xAI / Grok pricing history
+## 5. xAI / Grok pricing history
 
 **5 price points** loaded from `kb/price_points_xai.jsonl`.
 
@@ -198,7 +198,7 @@ Each price entry is presented as a row in a table. The columns are:
 
 ---
 
-## 1. Mistral AI pricing history
+## 6. Mistral AI pricing history
 
 **26 price points** loaded from `kb/price_points_mistral.jsonl`.
 
@@ -233,7 +233,7 @@ Each price entry is presented as a row in a table. The columns are:
 
 ---
 
-## 1. Cohere pricing history
+## 7. Cohere pricing history
 
 **13 price points** loaded from `kb/price_points_cohere.jsonl`.
 
@@ -255,7 +255,7 @@ Each price entry is presented as a row in a table. The columns are:
 
 ---
 
-## 1. Meta Llama (hosted) pricing history
+## 8. Meta Llama (hosted) pricing history
 
 **11 price points** loaded from `kb/price_points_meta_llama.jsonl`.
 
@@ -275,7 +275,7 @@ Each price entry is presented as a row in a table. The columns are:
 
 ---
 
-## 1. Alibaba / Qwen pricing history
+## 9. Alibaba / Qwen pricing history
 
 **25 price points** loaded from `kb/price_points_alibaba_qwen.jsonl`.
 
@@ -306,6 +306,54 @@ Each price entry is presented as a row in a table. The columns are:
 | Qwen VL OCR | 2025-??-?? | $0.72 | $0.72 | standard_list | 131,027 | https://developer.puter.com/tutorials/qwen-api-pricing/ | Qwen VL OCR at $0.72/$0.72 per 1M tokens (flat rate, input equals output). Vision-language OCR model. Source: Puter.com  |
 | Qwen-MT Turbo | 2025-??-?? | $0.16 | $0.49 | standard_list | 1,000,000 | https://developer.puter.com/tutorials/qwen-api-pricing/ | Qwen-MT Turbo at $0.16/$0.49 per 1M tokens, 1M context window. Translation model (machine translation). Source: Puter.co |
 | Qwen2.5 72B (hosted: DeepInfra) | 2024-12-?? | $0.23 | $0.40 | standard_list | 128,000 | https://deepinfra.com/blog/qwen-api-pricing-2026-guide | Qwen2.5 72B on DeepInfra at $0.23/$0.40 per 1M tokens (same pricing as Llama 3.3 70B on DeepInfra). Open-weight model. S |
+
+---
+
+## 10. Moonshot / Kimi pricing history
+
+**17 price points** loaded from `kb/price_points_moonshot_kimi.jsonl`.
+
+| Model | Effective date | Input $/M tok | Output $/M tok | Price type | Context | Source | Notes |
+|-------|---------------|---------------|----------------|------------|---------|--------|-------|
+| Kimi K2 | 2025-01-01 | $0.60 | $2.50 | standard_list | 128,000 | https://benchlm.ai/moonshot/api-pricing | Kimi K2 at $0.60/$2.50 per 1M tokens, 128K context window. Original Moonshot API model. Approximate launch date: early 2 |
+| Kimi K2.5 | 2025-06-09 | $0.15 | $0.75 | promo | 256,000 | https://openrouter.ai/moonshotai/kimi-k2.5 | Kimi K2.5 at $0.15/$0.75 (OpenRouter listed, Jun 9 2025) — introductory price. Price increased rapidly over the followin |
+| Kimi K2.5 | 2025-06-24 | $0.30 | $1.50 | promo | 256,000 | https://openrouter.ai/moonshotai/kimi-k2.5 | Kimi K2.5 at $0.30/$1.50 — first price increase on OpenRouter (Jun 24 2025), doubling from $0.15. Output at 5x ratio. So |
+| Kimi K2.5 | 2025-07-09 | $0.45 | $2.25 | promo | 256,000 | https://openrouter.ai/moonshotai/kimi-k2.5 | Kimi K2.5 at $0.45/$2.25 — second OpenRouter price increase (Jul 9 2025). Price held at $0.45 through Jul 24 per chart.  |
+| Kimi K2.5 | 2025-07-24 | $0.60 | $3.00 | standard_list | 256,000 | https://benchlm.ai/moonshot/api-pricing | Kimi K2.5 at $0.60/$3.00 — final price increase on OpenRouter (~Jul 24-Aug 8 2025), reaching the standard rate that matc |
+| Kimi K2.6 | 2025-11-01 | $0.95 | $4.00 | standard_list | 262,144 | https://benchlm.ai/moonshot/api-pricing | Kimi K2.6 at $0.95/$4.00 per 1M tokens, 256K context window. Moonshot's flagship model before K3 launch (Sep 2026). Appr |
+| Kimi K2.7 Code | 2026-01-01 | $0.95 | $4.00 | standard_list | 262,144 | https://benchlm.ai/moonshot/api-pricing | Kimi K2.7 Code at $0.95/$4.00 per 1M tokens, 262K context window. Coding-specialist variant of K2.6 — same price as K2.6 |
+| Kimi K2.7 Code Highspeed | 2026-01-01 | $1.90 | $8.00 | standard_list | 262,144 | https://www.chatbase.co/blog/kimi-k2-api | Kimi K2.7 Code Highspeed at $1.90/$8.00 per 1M tokens, 262K context window. High-speed variant of K2.7 Code — 2x the sta |
+| Kimi K3 | 2026-09-01 | $3.00 | $15.00 | standard_list | 1,050,000 | https://benchlm.ai/moonshot/api-pricing | Kimi K3 at $3.00/$15.00 per 1M tokens (cache-miss input), cache-hit input at $0.30, 1.05M context window. Moonshot's new |
+| Kimi K2.5 | 2025-07-24 | $0.36 | $1.80 | batch | 256,000 | https://benchlm.ai/moonshot/api-pricing | Kimi K2.5 batch API at $0.36/$1.80 per 1M tokens — 60% off standard rate. 24-hour SLA. Source: BenchLM Kimi API pricing  |
+| Kimi K2.6 | 2025-11-01 | $0.57 | $2.40 | batch | 262,144 | https://benchlm.ai/moonshot/api-pricing | Kimi K2.6 batch API at $0.57/$2.40 per 1M tokens — 60% off standard rate. 24-hour SLA. Source: BenchLM Kimi API pricing  |
+| Kimi K2.7 Code | 2026-01-01 | $0.57 | $2.40 | batch | 262,144 | https://benchlm.ai/moonshot/api-pricing | Kimi K2.7 Code batch API at $0.57/$2.40 per 1M tokens — 60% off standard rate. 24-hour SLA. Source: BenchLM Kimi API pri |
+| Kimi K2.5 | 2025-07-24 | $0.15 | — | cache | 256,000 | https://openrouter.ai/moonshotai/kimi-k2.5 | Kimi K2.5 cached input at $0.15 per 1M tokens — 75% discount from $0.60 standard input. Source: OpenRouter Kimi K2.5 mod |
+| Kimi K2.6 | 2025-11-01 | $0.16 | — | cache | 262,144 | https://www.chatbase.co/blog/kimi-k2-api | Kimi K2.6 cached input at $0.16 per 1M tokens — 83% discount from $0.95 standard input. Source: Chatbase Kimi K2 API gui |
+| Kimi K2.7 Code | 2026-01-01 | $0.19 | — | cache | 262,144 | https://www.chatbase.co/blog/kimi-k2-api | Kimi K2.7 Code cached input at $0.19 per 1M tokens — 80% discount from $0.95 standard input. Source: Chatbase Kimi K2 AP |
+| Kimi K2 | 2025-01-01 | $0.15 | — | cache | 128,000 | https://www.chatbase.co/blog/kimi-k2-api | Kimi K2 cached input at $0.15 per 1M tokens — 75% discount from $0.60 standard input. Source: Chatbase Kimi K2 API guide |
+| Kimi K3 | 2026-09-01 | $0.30 | — | cache | 1,050,000 | https://benchlm.ai/moonshot/api-pricing | Kimi K3 cached input at $0.30 per 1M tokens — 90% discount from $3.00 standard input. Best cache discount ratio in Kimi  |
+
+---
+
+## 11. OpenRouter Free Models pricing history
+
+**13 price points** loaded from `kb/price_points_openrouter_free.jsonl`.
+
+| Model | Effective date | Input $/M tok | Output $/M tok | Price type | Context | Source | Notes |
+|-------|---------------|---------------|----------------|------------|---------|--------|-------|
+| Nvidia Nemotron 3 Ultra 550B A55B | 2026-09-07 | $0.00 | $0.00 | free_tier | 1,000,000 | https://openrouter.ai/nvidia/nemotron-3-ultra-550b-a55b:free | NVIDIA Nemotron 3 Ultra 550B A55B:free. Largest free Nemotron. 550B/55B MoE 1M context. CONFIRMED WORKING. Most capable  |
+| Nvidia Nemotron 3 Super 120B A12B | 2026-09-07 | $0.00 | $0.00 | free_tier | 262,144 | https://openrouter.ai/nvidia/nemotron-3-super-120b-a12b:free | NVIDIA Nemotron 3 Super 120B A12B:free. Mid-tier free Nemotron. 120B/12B MoE 262K context. CONFIRMED WORKING. Currently  |
+| Nvidia Nemotron 3 Nano Omni 30B A3B Reasoning | 2026-09-07 | $0.00 | $0.00 | free_tier | 256,000 | https://openrouter.ai/nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free | NVIDIA Nemotron 3 Nano Omni 30B A3B Reasoning:free. Smallest WORKING free Nemotron. 30B/3B MoE reasoning-specialized 256 |
+| Nvidia Nemotron 3.5 Lightning | 2026-09-07 | $0.00 | $0.00 | free_tier | 1,000,000 | https://openrouter.ai/nvidia/nemotron-3.5-lightning:free | NVIDIA Nemotron 3.5 Lightning:free. Newest Nemotron 3.5. 1M context. 429 on free tier. NOTE Nemotron 3 Super 120B and Ul |
+| Google Gemma 4 31B Instruct | 2026-09-07 | $0.00 | $0.00 | free_tier | 1,000,000 | https://openrouter.ai/google/gemma-4-31b-it:free | google/gemma-4-31b-it:free. Google Gemma 4 31B IT. 1M context. 429 on free tier. Part of Google Gemma 4 family. Status m |
+| Google Gemma 4 26B A4B Instruct | 2026-09-07 | $0.00 | $0.00 | free_tier | 1,000,000 | https://openrouter.ai/google/gemma-4-26b-a4b-it:free | google/gemma-4-26b-a4b-it:free. Google Gemma 4 26B A4B IT. 1M context. 26B/4B MoE. 429 same failure mode as Gemma 4 31B. |
+| Poolside Laguna S 2.1 | 2026-09-07 | $0.00 | $0.00 | free_tier | — | https://openrouter.ai/poolside/laguna-s-2.1:free | poolside/laguna-s-2.1:free. Poolside coding-optimized model. 429 on free tier. Poolside is a coding-focused lab. Status  |
+| Thinking Machines Inkling | 2026-09-07 | $0.00 | $0.00 | free_tier | 1,000,000 | https://openrouter.ai/thinkingmachines/inkling:free | thinkingmachines/inkling:free. Thinking Machines Inkling open-weight. 403 Forbidden API access requires approved agentic |
+| Inclusive AI Ling 3.0 Flash Fin | 2026-09-07 | $0.00 | $0.00 | free_tier | — | https://openrouter.ai/inclusionai/ling-3.0-flash-fin:free | inclusionai/ling-3.0-flash-fin:free. Inclusive AI Ling 3.0 Flash Fin financial-domain. Returns EMPTY content accepts req |
+| Inclusion AI Ling Flash | 2026-09-07 | $0.00 | $0.00 | free_tier | — | https://openrouter.ai/inclusionai/ling-flash:free | inclusionai/ling-flash:free. Inclusive AI Ling Flash lighter Ling variant. Returns EMPTY content same failure mode as Li |
+| Cohere North Mini Code | 2026-09-07 | $0.00 | $0.00 | free_tier | — | https://openrouter.ai/cohere/north-mini-code:free | cohere/north-mini-code:free. Cohere North Mini Code code-specialized small model. Returns EMPTY content accepts request  |
+| Dots Studio Dots 3 Note Preview | 2026-09-07 | $0.00 | $0.00 | free_tier | — | https://openrouter.ai/dots-studio/dots-3-note-preview:free | dots-studio/dots-3-note-preview:free. Dots Studio Dots 3 Note Preview note-taking summarization. Returns EMPTY content s |
+| OpenRouter Free Router | 2026-09-07 | $0.00 | $0.00 | free_tier | — | https://openrouter.ai/openrouter/free | openrouter/free. OpenRouter meta-router for free models. Returns EMPTY content. Could mean a no free models available b  |
 
 ---
 
@@ -444,6 +492,12 @@ These are the **latest standard_list price points** for each model as loaded in 
 | Alibaba / Qwen | Qwen VL OCR | 2025-??-?? | $0.72 | $0.72 | 131,027 | https://developer.puter.com/tutorials/qwen-api-pricing/ |
 | Alibaba / Qwen | Qwen-MT Turbo | 2025-??-?? | $0.16 | $0.49 | 1,000,000 | https://developer.puter.com/tutorials/qwen-api-pricing/ |
 | Alibaba / Qwen | Qwen2.5 72B (hosted: DeepInfra) | 2024-12-?? | $0.23 | $0.40 | 128,000 | https://deepinfra.com/blog/qwen-api-pricing-2026-guide |
+| Moonshot / Kimi | Kimi K2 | 2025-01-01 | $0.60 | $2.50 | 128,000 | https://benchlm.ai/moonshot/api-pricing |
+| Moonshot / Kimi | Kimi K2.5 | 2025-07-24 | $0.60 | $3.00 | 256,000 | https://benchlm.ai/moonshot/api-pricing |
+| Moonshot / Kimi | Kimi K2.6 | 2025-11-01 | $0.95 | $4.00 | 262,144 | https://benchlm.ai/moonshot/api-pricing |
+| Moonshot / Kimi | Kimi K2.7 Code | 2026-01-01 | $0.95 | $4.00 | 262,144 | https://benchlm.ai/moonshot/api-pricing |
+| Moonshot / Kimi | Kimi K2.7 Code Highspeed | 2026-01-01 | $1.90 | $8.00 | 262,144 | https://www.chatbase.co/blog/kimi-k2-api |
+| Moonshot / Kimi | Kimi K3 | 2026-09-01 | $3.00 | $15.00 | 1,050,000 | https://benchlm.ai/moonshot/api-pricing |
 
 ---
 

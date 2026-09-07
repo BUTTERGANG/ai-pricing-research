@@ -12,8 +12,8 @@
   - `price_points_cohere.jsonl` (13 entries, 2023-2026)
   - `price_points_meta_llama.jsonl` (11 entries, 2024-2026 — open-weight, hosted pricing)
   - `price_points_alibaba_qwen.jsonl` (25 entries, 2025-2026)
-  - `price_points_moonshot_kimi.jsonl` (TBD)
-  - `price_points_openrouter_free.jsonl` (TBD — free-tier models)
+  - `price_points_moonshot_kimi.jsonl` (17 entries, 2025-2026 — Kimi K2 through K3 with price history, batch, and cache rates)
+  - `price_points_openrouter_free.jsonl` (13 models with lifecycle status tracking — working, rate_limited_429, access_gated_403, empty_content)
 - `PRICE_POINTS_SPEC.md` — field definitions, version-tracking rules, price-type taxonomy, effective-date rules, source attribution, and maintenance conventions.
 - `CONVENTIONS.md` — project-level accuracy instructions (originally supplied by the user).
 

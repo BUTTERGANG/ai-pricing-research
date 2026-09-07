@@ -92,6 +92,8 @@ provider_labels = {
     "cohere": "Cohere",
     "meta_llama": "Meta Llama (hosted)",
     "alibaba_qwen": "Alibaba / Qwen",
+    "moonshot_kimi": "Moonshot / Kimi",
+    "openrouter_free": "OpenRouter Free Models",
 }
 
 provider_names = {
@@ -104,12 +106,15 @@ provider_names = {
     "cohere": "Cohere",
     "meta_llama": "Meta Llama (hosted)",
     "alibaba_qwen": "Alibaba / Qwen",
+    "moonshot_kimi": "Moonshot / Kimi",
+    "openrouter_free": "OpenRouter Free Models",
 }
 
 section_num = 1
 for provider, recs in by_provider.items():
     label = provider_labels[provider]
     report.append(f"## {section_num}. {label} pricing history")
+    section_num += 1
     report.append("")
     report.append(f"**{len(recs)} price points** loaded from `kb/price_points_{provider}.jsonl`.")
     report.append("")
