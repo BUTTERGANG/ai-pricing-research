@@ -12,9 +12,14 @@
 - [4. Google / Gemini pricing history](#4-google--gemini-pricing-history)
 - [5. DeepSeek pricing history](#5-deepseek-pricing-history)
 - [6. xAI / Grok pricing history](#6-xai--grok-pricing-history)
-- [7. Cross-provider comparison — current prices (late 2026 snapshot)](#7-cross-provider-comparison--current-prices-late-2026-snapshot)
-- [8. Market data](#8-market-data)
-- [9. Sources](#9-sources)
+- [7. Cohere pricing history](#7-cohere-pricing-history)
+- [8. Meta Llama (hosted) pricing history](#8-meta-llama-hosted-pricing-history)
+- [9. Alibaba / Qwen pricing history](#9-alibaba--qwen-pricing-history)
+- [10. Moonshot / Kimi pricing history](#10-moonshot--kimi-pricing-history)
+- [11. OpenRouter Free Models pricing history](#11-openrouter-free-models-pricing-history)
+- [12. Cross-provider comparison — current prices (late 2026 snapshot)](#12-cross-provider-comparison--current-prices-late-2026-snapshot)
+- [13. Market data](#13-market-data)
+- [14. Sources](#14-sources)
 
 ---
 
@@ -501,7 +506,7 @@ These are the **latest standard_list price points** for each model as loaded in 
 
 ---
 
-## 8. Market data
+## 13. Market data
 
 See `kb/market_data.md` for the full dataset with source URLs. Key numbers below:
 
@@ -550,7 +555,7 @@ See `kb/market_data.md` for the full dataset with source URLs. Key numbers below
 
 ---
 
-## 9. Sources
+## 14. Sources
 
 ### Provider pricing pages (canonical)
 
