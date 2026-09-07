@@ -88,6 +88,10 @@ provider_labels = {
     "google": "Google / Gemini",
     "deepseek": "DeepSeek",
     "xai": "xAI / Grok",
+    "mistral": "Mistral AI",
+    "cohere": "Cohere",
+    "meta_llama": "Meta Llama (hosted)",
+    "alibaba_qwen": "Alibaba / Qwen",
 }
 
 provider_names = {
@@ -96,11 +100,16 @@ provider_names = {
     "google": "Google / Gemini",
     "deepseek": "DeepSeek",
     "xai": "xAI / Grok",
+    "mistral": "Mistral AI",
+    "cohere": "Cohere",
+    "meta_llama": "Meta Llama (hosted)",
+    "alibaba_qwen": "Alibaba / Qwen",
 }
 
+section_num = 1
 for provider, recs in by_provider.items():
     label = provider_labels[provider]
-    report.append(f"## {['2','3','4','5','6'][list(by_provider.keys()).index(provider)]} {label} pricing history")
+    report.append(f"## {section_num}. {label} pricing history")
     report.append("")
     report.append(f"**{len(recs)} price points** loaded from `kb/price_points_{provider}.jsonl`.")
     report.append("")

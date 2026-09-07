@@ -1,6 +1,6 @@
 # AI Pricing Research — Consolidated Report
 
-**Generated:** 2026-09-07 — from `kb/price_points_*.jsonl` (111 entries across 5 providers)
+**Generated:** 2026-09-07 — from `kb/price_points_*.jsonl` (116 entries across 5 providers)
 
 ---
 
@@ -42,7 +42,7 @@ Each price entry is presented as a row in a table. The columns are:
 
 ---
 
-## 2 OpenAI pricing history
+## 1. OpenAI pricing history
 
 **37 price points** loaded from `kb/price_points_openai.jsonl`.
 
@@ -88,7 +88,7 @@ Each price entry is presented as a row in a table. The columns are:
 
 ---
 
-## 3 Anthropic pricing history
+## 1. Anthropic pricing history
 
 **27 price points** loaded from `kb/price_points_anthropic.jsonl`.
 
@@ -124,7 +124,7 @@ Each price entry is presented as a row in a table. The columns are:
 
 ---
 
-## 4 Google / Gemini pricing history
+## 1. Google / Gemini pricing history
 
 **31 price points** loaded from `kb/price_points_google.jsonl`.
 
@@ -164,7 +164,7 @@ Each price entry is presented as a row in a table. The columns are:
 
 ---
 
-## 5 DeepSeek pricing history
+## 1. DeepSeek pricing history
 
 **11 price points** loaded from `kb/price_points_deepseek.jsonl`.
 
@@ -184,7 +184,7 @@ Each price entry is presented as a row in a table. The columns are:
 
 ---
 
-## 6 xAI / Grok pricing history
+## 1. xAI / Grok pricing history
 
 **5 price points** loaded from `kb/price_points_xai.jsonl`.
 
@@ -195,6 +195,117 @@ Each price entry is presented as a row in a table. The columns are:
 | Grok 3 Mini | 2026-04-?? | $3.00 | $5.00 | standard_list | 128,000 | https://www.getapipulse.com/blog-q2-2026-pricing-report.html | Grok 3 Mini at $3/$5 per 1M tokens, 128K context window. Cheaper output than Grok 3 at $30/$150 post-increase. But input |
 | Grok 4.3 | 2026-05-?? | $0.20 | $0.80 | standard_list | 2,000,000 | https://chatforest.com/guides/llm-api-pricing-comparison-2026/ | Grok 4.3 at $0.20/$0.80 per 1M tokens, 2M context window. Largest context window among priced models at time of launch.  |
 | Grok Build 0.1 | 2026-05-?? | $1.00 | $2.00 | standard_list | 256,000 | https://chatforest.com/guides/llm-api-pricing-comparison-2026/ | Grok Build 0.1 at $1/$2 per 1M tokens, 256K context window. Agentic coding only variant. Competes with GPT-5.3 Codex ($1 |
+
+---
+
+## 1. Mistral AI pricing history
+
+**26 price points** loaded from `kb/price_points_mistral.jsonl`.
+
+| Model | Effective date | Input $/M tok | Output $/M tok | Price type | Context | Source | Notes |
+|-------|---------------|---------------|----------------|------------|---------|--------|-------|
+| Mistral Large 3 (2512) | 2025-12-?? | $0.50 | $1.50 | standard_list | 262,144 | https://mistral.ai/pricing/api/ | Mistral Large 3 2512 launched December 2025. Current flagship. $0.50/$1.50 per 1M tokens, 262K context window. Open-weig |
+| Mistral Large 2.1 (2411) | 2024-11-?? | $2.00 | $6.00 | standard_list | 131,072 | https://pricepertoken.com/pricing-page/provider/mistral-ai | Mistral Large 2.1 2411 at $2.00/$6.00 per 1M tokens, 131K context window. Predecessor to Mistral Large 3 (2512). Source: |
+| Mistral Large 2.0 (2407) | 2024-07-?? | $2.00 | $6.00 | standard_list | 131,072 | https://pricepertoken.com/pricing-page/provider/mistral-ai | Mistral Large 2.0 2407 at $2.00/$6.00 per 1M tokens, 131K context window. First Mistral Large 2. Deprecated November 29  |
+| Mistral Large 1.0 (2402) | 2024-02-?? | $2.00 | $6.00 | standard_list | 128,000 | https://docs.mistral.ai/models | Mistral Large 1.0 2402 launched February 2024. First Mistral Large model. $2.00/$6.00 per 1M tokens, 128K context window |
+| Mistral Medium 3.5 | 2026-04-?? | $1.50 | $7.50 | standard_list | 256,000 | https://mistral.ai/pricing/api/ | Mistral Medium 3.5 launched April 2026 at $1.50/$7.50 per 1M tokens, 256K context window. Open-weight (Modified MIT). De |
+| Mistral Medium 3.1 (2508) | 2025-08-?? | $0.40 | $2.00 | standard_list | 131,072 | https://pricepertoken.com/pricing-page/provider/mistral-ai | Mistral Medium 3.1 2508 at $0.40/$2.00 per 1M tokens, 131K context window. Predecessor to Mistral Medium 3 (launched May |
+| Mistral Medium 3 (2505) | 2025-05-?? | $0.40 | $2.00 | standard_list | 131,072 | https://pricepertoken.com/pricing-page/provider/mistral-ai | Mistral Medium 3 2505 launched May 2025 at $0.40/$2.00 per 1M tokens, 131K context window. Predecessor to Mistral Medium |
+| Mistral Medium 1.0 (2312) | 2023-12-?? | $0.40 | $2.00 | standard_list | 131,072 | https://docs.mistral.ai/models | Mistral Medium 1.0 2312 launched December 2023. First Mistral Medium model. $0.40/$2.00 per 1M tokens (same price mainta |
+| Mistral Small 4 (2603) | 2026-03-?? | $0.15 | $0.60 | standard_list | 128,000 | https://mistral.ai/pricing/api/ | Mistral Small 4 2603 launched March 2026 at $0.15/$0.60 per 1M tokens, 128K context window. Open-weight, Apache 2.0. Mul |
+| Mistral Small 3.2 (2506) | 2025-06-?? | $0.08 | $0.20 | standard_list | 128,000 | https://pricepertoken.com/pricing-page/provider/mistral-ai | Mistral Small 3.2 2506 at $0.08/$0.20 per 1M tokens, 128K context window. Cheapest Small model at launch. Deprecated Apr |
+| Mistral Small 3.1 (2503) | 2025-03-?? | $0.10 | $0.30 | standard_list | 128,000 | https://pricepertoken.com/pricing-page/provider/mistral-ai | Mistral Small 3.1 2503 at $0.10/$0.30 per 1M tokens, 128K context window. Predecessor to Mistral Small 3.2 (June 2025).  |
+| Mistral Small 3.0 (2501) | 2025-01-?? | $0.10 | $0.30 | standard_list | 128,000 | https://pricepertoken.com/pricing-page/provider/mistral-ai | Mistral Small 3.0 2501 at $0.10/$0.30 per 1M tokens, 128K context window. Predecessor to Mistral Small 3.1 (March 2025). |
+| Mistral Small 2.0 (2409) | 2024-09-?? | $0.10 | $0.30 | standard_list | 128,000 | https://pricepertoken.com/pricing-page/provider/mistral-ai | Mistral Small 2.0 2409 at $0.10/$0.30 per 1M tokens, 128K context window. Predecessor to Mistral Small 3.0 (January 2025 |
+| Mistral Small 1.0 (2402) | 2024-02-?? | $0.10 | $0.30 | standard_list | 128,000 | https://docs.mistral.ai/models | Mistral Small 1.0 2402 launched February 2024. First Mistral Small model. $0.10/$0.30 per 1M tokens, 128K context window |
+| Mistral Small 3.2 24B | 2025-06-?? | $0.07 | $0.20 | standard_list | 131,072 | https://pricepertoken.com/pricing-page/provider/mistral-ai | Mistral Small 3.2 24B at $0.075/$0.20 per 1M tokens, 131K context window. Pricepertoken model page lists this rate. NOTE |
+| Mistral Nemo | 2024-07-?? | $0.02 | $0.03 | standard_list | 131,072 | https://mistral.ai/pricing/api/ | Mistral Nemo at $0.02/$0.03 per 1M tokens, 131K context window. 12B model, multilingual, budget tier. Cheapest generalis |
+| Codestral 2508 | 2025-08-?? | $0.30 | $0.90 | standard_list | 256,000 | https://mistral.ai/pricing/api/ | Codestral 2508 at $0.30/$0.90 per 1M tokens, 256K context window. Premier coding model, low-latency, optimized for high- |
+| Devstral 2 2512 | 2025-12-?? | $0.40 | $0.90 | standard_list | 262,144 | https://pricepertoken.com/pricing-page/provider/mistral-ai | Devstral 2 2512 at $0.40/$0.90 per 1M tokens, 262K context window. Agentic coding model launched December 2025. Deprecat |
+| Ministral 3 8B (2512) | 2025-12-?? | $0.15 | $0.15 | standard_list | 262,144 | https://mistral.ai/pricing/api/ | Ministral 3 8B 2512 at $0.15/$0.15 per 1M tokens (input equals output), 262K context window. Open-weight, edge model, be |
+| Ministral 3 3B (2512) | 2025-12-?? | $0.10 | $0.10 | standard_list | 262,144 | https://mistral.ai/pricing/api/ | Ministral 3 3B 2512 at $0.10/$0.10 per 1M tokens, 262K context window. Open-weight, smallest edge model. Source: Mistral |
+| Mistral Small 4 (2603) | 2026-03-?? | $0.07 | $0.30 | batch | — | https://mistral.ai/pricing/api/ | Mistral Small 4 batch: $0.075/$0.30 per 1M tokens. 50% off standard. Source: Mistral API pricing page (standard + batch  |
+| Mistral Large 3 (2512) | 2025-12-?? | $0.25 | $0.75 | batch | — | https://mistral.ai/pricing/api/ | Mistral Large 3 batch: $0.25/$0.75 per 1M tokens. 50% off standard. Source: Mistral API pricing page. |
+| Mistral Medium 3.5 | 2026-04-?? | $0.15 | — | cache | — | https://mistral.ai/pricing/api/ | Mistral Medium 3.5 cached input at $0.15 per 1M tokens — 90% discount from $1.50 standard. Source: Mistral API pricing p |
+| Mistral Large 3 (2512) | 2025-12-?? | $0.05 | — | cache | — | https://mistral.ai/pricing/api/ | Mistral Large 3 cached input at $0.05 per 1M tokens — 90% discount from $0.50 standard. Source: Mistral API pricing page |
+| Mistral Small 4 (2603) | 2026-03-?? | $0.01 | — | cache | — | https://mistral.ai/pricing/api/ | Mistral Small 4 cached input at $0.015 per 1M tokens — 90% discount from $0.15 standard. Source: Mistral API pricing pag |
+| Mistral Le Chat Pro | 2026-05-?? | — | — | other | — | https://mistral.ai/pricing/ | Mistral Le Chat Pro subscription: $14.99/month (normally $14.99, students $5.99). Separate from API billing. Includes Mi |
+
+---
+
+## 1. Cohere pricing history
+
+**13 price points** loaded from `kb/price_points_cohere.jsonl`.
+
+| Model | Effective date | Input $/M tok | Output $/M tok | Price type | Context | Source | Notes |
+|-------|---------------|---------------|----------------|------------|---------|--------|-------|
+| Command (legacy) | 2023-??-?? | $1.00 | $2.00 | standard_list | 4,096 | https://cohere.com/pricing | Legacy Command at $1.00/$2.00 per 1M tokens, 4K context. Deprecated September 15 2025. Source: Cohere pricing FAQ. This  |
+| Command-light (legacy) | 2023-??-?? | $0.30 | $0.60 | standard_list | 4,096 | https://cohere.com/pricing | Legacy Command-light at $0.30/$0.60 per 1M tokens, 4K context. Deprecated September 15 2025. Source: Cohere pricing FAQ. |
+| Command R 03-2024 | 2024-03-?? | $0.50 | $1.50 | standard_list | 128,000 | https://cohere.com/pricing | Command R 03-2024 launched March 2024 at $0.50/$1.50 per 1M tokens, 128K context window. First Cohere model with 128K co |
+| Command R+ 04-2024 | 2024-04-?? | $3.00 | $15.00 | standard_list | 128,000 | https://cohere.com/pricing | Command R+ 04-2024 launched April 2024 at $3.00/$15.00 per 1M tokens, 128K context window. First Cohere flagship with 12 |
+| Command R+ 08-2024 | 2024-08-?? | $2.50 | $10.00 | standard_list | 128,000 | https://cohere.com/pricing | Command R+ 08-2024 refresh launched August 2024 at $2.50/$10.00 per 1M tokens, 128K context window. ~50% higher throughp |
+| Command R 08-2024 | 2024-08-?? | $0.15 | $0.60 | standard_list | 128,000 | https://cohere.com/pricing | Command R 08-2024 refresh at $0.15/$0.60 per 1M tokens, 128K context window. Dropped from $0.50/$1.50 at March 2024 laun |
+| Command R7B 12-2024 | 2024-12-?? | $0.04 | $0.15 | standard_list | 128,000 | https://cohere.com/pricing | Command R7B 12-2024 launched December 2024 at $0.0375/$0.15 per 1M tokens, 128K context window. Budget tier — 3-27x chea |
+| Command R+ 08-2024 | 2024-08-?? | $0.25 | — | cache | — | https://cohere.com/pricing | Command R+ 08-2024 cached input at $0.25 per 1M tokens — 90% discount from $2.50 standard input. Source: Cohere pricing  |
+| Command R 08-2024 | 2024-08-?? | $0.01 | — | cache | — | https://cohere.com/pricing | Command R 08-2024 cached input at $0.015 per 1M tokens — 90% discount from $0.15 standard input. Source: Cohere pricing  |
+| Command R7B 12-2024 | 2024-12-?? | $0.00 | — | cache | — | https://cohere.com/pricing | Command R7B 12-2024 cached input at $0.00375 per 1M tokens — 90% discount from $0.0375 standard. Source: Cohere pricing  |
+| Command R+ 08-2024 | 2024-08-?? | $1.25 | $5.00 | batch | — | https://cohere.com/pricing | Command R+ 08-2024 batch: $1.25/$5.00 per 1M tokens. 50% off standard. Source: Cohere pricing (batch rates). |
+| Command A | 2025-??-?? | $2.50 | $10.00 | standard_list | 256,000 | https://cohere.com/pricing | Command A at $2.50/$10.00 per 1M tokens, 256K context window. Newest Cohere flagship. Same rate card as Command R+ 08-20 |
+| Aya Expanse 8B / 32B | 2025-??-?? | $0.50 | $1.50 | standard_list | 128,000 | https://cohere.com/pricing | Aya Expanse 8B and 32B on Cohere API at $0.50/$1.50 per 1M tokens, 128K context window. Source: Cohere pricing FAQ. NOTE |
+
+---
+
+## 1. Meta Llama (hosted) pricing history
+
+**11 price points** loaded from `kb/price_points_meta_llama.jsonl`.
+
+| Model | Effective date | Input $/M tok | Output $/M tok | Price type | Context | Source | Notes |
+|-------|---------------|---------------|----------------|------------|---------|--------|-------|
+| Llama 3.1 8B (hosted: Groq) | 2024-07-?? | $0.05 | $0.08 | standard_list | 128,000 | https://www.aipricing.guru/meta-pricing/ | Llama 3.1 8B on Groq at $0.05/$0.08 per 1M tokens. Cheapest hosted Llama option. Meta does NOT sell first-party Llama AP |
+| Llama 3.1 8B (hosted: Together AI) | 2024-07-?? | $0.18 | $0.18 | standard_list | 128,000 | https://www.aipricing.guru/meta-pricing/ | Llama 3.1 8B on Together AI at $0.18/$0.18 per 1M tokens. Flat rate (input equals output). Source: AI Pricing Guru Meta  |
+| Llama 3.1 8B (hosted: Fireworks) | 2024-07-?? | $0.20 | $0.20 | standard_list | 128,000 | https://www.aipricing.guru/meta-pricing/ | Llama 3.1 8B on Fireworks at $0.20/$0.20 per 1M tokens. Slightly more expensive than Together AI. Source: AI Pricing Gur |
+| Llama 3.3 70B (hosted: DeepInfra) | 2024-12-?? | $0.23 | $0.40 | standard_list | 128,000 | https://www.aipricing.guru/meta-pricing/ | Llama 3.3 70B on DeepInfra at $0.23/$0.40 per 1M tokens. Cheapest host for Llama 3.3 70B — approximately 3x cheaper than |
+| Llama 3.3 70B (hosted: Groq) | 2024-12-?? | $0.59 | $0.79 | standard_list | 128,000 | https://www.aipricing.guru/meta-pricing/ | Llama 3.3 70B on Groq at $0.59/$0.79 per 1M tokens. Fastest host at 250+ tokens/sec output. About 10-19x cheaper than GP |
+| Llama 3.3 70B (hosted: Together AI) | 2024-12-?? | $0.88 | $0.88 | standard_list | 128,000 | https://www.aipricing.guru/meta-pricing/ | Llama 3.3 70B on Together AI at $0.88/$0.88 per 1M tokens (flat rate). Source: AI Pricing Guru Meta pricing comparison M |
+| Llama 3.3 70B (hosted: Fireworks) | 2024-12-?? | $0.90 | $0.90 | standard_list | 128,000 | https://www.aipricing.guru/meta-pricing/ | Llama 3.3 70B on Fireworks at $0.90/$0.90 per 1M tokens (flat rate, >16B tier). Slightly more expensive than Together AI |
+| Llama 3.1 405B (hosted: Fireworks) | 2024-07-?? | $3.00 | $3.00 | standard_list | 131,072 | https://www.aipricing.guru/meta-pricing/ | Llama 3.1 405B on Fireworks at $3.00/$3.00 per 1M tokens (flat rate). Cheapest host for 405B at time of writing. NOTE: T |
+| Llama 3.1 405B (hosted: Together AI) | 2024-07-?? | $3.50 | $3.50 | standard_list | 131,072 | https://www.aipricing.guru/meta-pricing/ | Llama 3.1 405B on Together AI at $3.50/$3.50 per 1M tokens (flat rate). STALE — Together AI removed 405B from its server |
+| Llama 4 Scout (hosted: Groq) | 2025-??-?? | $0.11 | $0.34 | standard_list | 10,000,000 | https://www.getapipulse.com/blog-state-of-llm-pricing-may-2026.html | Llama 4 Scout on Groq at $0.11/$0.34 per 1M tokens, 10M context window. Latest Llama 4 Scout. 10M context is the largest |
+| Llama 4 Maverick (hosted: Groq) | 2025-??-?? | $0.20 | $0.60 | standard_list | 10,000,000 | https://www.getapipulse.com/blog-state-of-llm-pricing-may-2026.html | Llama 4 Maverick on Groq at $0.20/$0.60 per 1M tokens, 10M context window. Latest Llama 4 Maverick. Source: APIpulse Sta |
+
+---
+
+## 1. Alibaba / Qwen pricing history
+
+**25 price points** loaded from `kb/price_points_alibaba_qwen.jsonl`.
+
+| Model | Effective date | Input $/M tok | Output $/M tok | Price type | Context | Source | Notes |
+|-------|---------------|---------------|----------------|------------|---------|--------|-------|
+| Qwen3-Max | 2025-??-?? | $1.20 | $6.00 | standard_list | 262,144 | https://deepinfra.com/blog/qwen-api-pricing-2026-guide | Qwen3-Max at $1.20/$6.00 per 1M tokens, 262K context window. Proprietary flagship tier. Alibaba Cloud Model Studio (form |
+| Qwen3-Max Thinking | 2025-??-?? | $0.78 | $3.90 | standard_list | 262,144 | https://developer.puter.com/tutorials/qwen-api-pricing/ | Qwen3-Max Thinking at $0.78/$3.90 per 1M tokens, 262K context window. Thinking/reasoning variant of Qwen3-Max. Source: P |
+| Qwen3 Max | 2026-??-?? | $2.00 | $6.00 | standard_list | 1,000,000 | https://developer.puter.com/tutorials/qwen-api-pricing/ | Qwen3 Max (1M context) at $2.00/$6.00 per 1M tokens, 1M context window. Current flagship generation on Alibaba Cloud Mod |
+| Qwen3.6 Max Preview | 2025-??-?? | $1.30 | $7.80 | standard_list | 262,144 | https://developer.puter.com/tutorials/qwen-api-pricing/ | Qwen3.6 Max Preview at $1.30/$7.80 per 1M tokens, 262K context window. Preview of Qwen3.6 Max generation. Source: Puter. |
+| Qwen3.7 Plus | 2026-??-?? | $0.32 | $1.28 | standard_list | 1,000,000 | https://developer.puter.com/tutorials/qwen-api-pricing/ | Qwen3.7 Plus at $0.32/$1.28 per 1M tokens, 1M context window. Multimodal agent tier: vision, video, agentic pipelines. S |
+| Qwen3.7 Max | 2026-??-?? | $1.25 | $3.75 | standard_list | 1,000,000 | https://developer.puter.com/tutorials/qwen-api-pricing/ | Qwen3.7 Max at $1.25/$3.75 per 1M tokens, 1M context window. Previous flagship — remains available after Qwen3.8 Max (Au |
+| Qwen3.8 Max | 2026-08-03 | $2.00 | $6.00 | standard_list | 1,000,000 | https://developer.puter.com/tutorials/qwen-api-pricing/ | Qwen3.8 Max launched August 3 2026 at $2.00/$6.00 per 1M tokens, 1M context window. Current flagship — coding and long-h |
+| Qwen3.8 Flash | 2026-08-26 | $0.14 | $0.42 | standard_list | 1,000,000 | https://developer.puter.com/tutorials/qwen-api-pricing/ | Qwen3.8 Flash launched August 26 2026 at $0.14/$0.42 per 1M tokens, 1M context window. Flat rate — no length tier. Cheap |
+| Qwen3.7 Flash | 2026-??-?? | $0.03 | $0.13 | tiered | 1,000,000 | https://developer.puter.com/tutorials/qwen-api-pricing/ | Qwen3.7 Flash at $0.03/$0.13 per 1M tokens under 32K tokens; rises to $0.20/$0.80 above 256K tokens. High-volume multimo |
+| Qwen3.6 Flash | 2025-??-?? | $0.19 | $1.13 | standard_list | 1,000,000 | https://developer.puter.com/tutorials/qwen-api-pricing/ | Qwen3.6 Flash at $0.19/$1.13 per 1M tokens, tiered by length (the $0.19/$1.13 is for the standard tier). High-volume sim |
+| Qwen3.6 Plus | 2025-??-?? | $0.50 | $3.00 | standard_list | 1,000,000 | https://developer.puter.com/tutorials/qwen-api-pricing/ | Qwen3.6 Plus at $0.50/$3.00 per 1M tokens, 1M context window. Balanced production workloads — multimodal. Source: Puter. |
+| Qwen3.5 Plus | 2025-??-?? | $0.50 | $3.00 | standard_list | 1,000,000 | https://qwen.ai/apiplatform | Qwen3.5 Plus at $0.50/$3.00 per 1M tokens, 1M context window. Previous balanced generation. Source: Qwen API platform (q |
+| Qwen3 Flash | 2025-??-?? | $0.05 | $0.40 | standard_list | 1,000,000 | https://developer.puter.com/tutorials/qwen-api-pricing/ | Qwen3 Flash at $0.05/$0.40 per 1M tokens, 1M context window. High-volume simple tasks. Cheapest Qwen model on Alibaba pl |
+| Qwen3 Coder Plus | 2025-??-?? | $1.00 | $5.00 | tiered | 1,000,000 | https://developer.puter.com/tutorials/qwen-api-pricing/ | Qwen3 Coder Plus at $1.00/$5.00 for short contexts (<=32K input) but rises steeply to $6.00/$60.00 for 1M context. Agent |
+| Qwen3 Coder 480B A35B | 2025-??-?? | $1.50 | $7.50 | standard_list | 1,000,000 | https://developer.puter.com/tutorials/qwen-api-pricing/ | Qwen3 Coder 480B A35B at $1.50/$7.50 per 1M tokens, flat rate (no length tier). Large MoE coding model. Source: Puter.co |
+| Qwen3 Coder Next | 2025-??-?? | $0.11 | $0.80 | standard_list | 1,000,000 | https://developer.puter.com/tutorials/qwen-api-pricing/ | Qwen3 Coder Next at $0.11/$0.80 per 1M tokens, flat rate. Next-gen coding model — very cheap for coding tasks. Source: P |
+| Qwen3 Coder Flash | 2025-??-?? | $0.30 | $1.50 | tiered | 1,000,000 | https://developer.puter.com/tutorials/qwen-api-pricing/ | Qwen3 Coder Flash at $0.30/$1.50 for short contexts (<=32K input) rising to $1.60/$9.60 at 1M context. Flash coding mode |
+| Qwen3-VL Plus | 2025-??-?? | $0.20 | $1.60 | standard_list | 131,027 | https://developer.puter.com/tutorials/qwen-api-pricing/ | Qwen3-VL Plus at $0.20/$1.60 per 1M tokens, ~131K context window. Vision model — image and document understanding. Sourc |
+| Qwen3 VL 235B A22B | 2025-??-?? | $0.70 | $2.80 | standard_list | 131,027 | https://developer.puter.com/tutorials/qwen-api-pricing/ | Qwen3 VL 235B A22B at $0.70/$2.80 per 1M tokens, ~131K context window. Large vision MoE model. Source: Puter.com Qwen AP |
+| Qwen3.5 Omni Flash | 2025-??-?? | $0.43 | $1.66 | standard_list | 1,000,000 | https://developer.puter.com/tutorials/qwen-api-pricing/ | Qwen3.5 Omni Flash at $0.43 text input / $1.66 output per 1M tokens, 1M context window. Audio/video omni model (text, au |
+| Qwen3.5 Omni Plus | 2026-??-?? | $1.00 | $6.00 | standard_list | 1,000,000 | https://www.alibabacloud.com/help/en/model-studio/models | Qwen3.5-Omni-Plus at Alibaba Cloud Model Studio — omni model (real-time audio/video). Source: Alibaba Cloud Model Studio |
+| Qwen Image 2.0 | 2025-??-?? | — | — | other | — | https://developer.puter.com/tutorials/qwen-api-pricing/ | Qwen Image 2.0 at $0.04 per image (standard) / $0.08 per image (Pro). Image generation model — NOT per-token pricing (pe |
+| Qwen VL OCR | 2025-??-?? | $0.72 | $0.72 | standard_list | 131,027 | https://developer.puter.com/tutorials/qwen-api-pricing/ | Qwen VL OCR at $0.72/$0.72 per 1M tokens (flat rate, input equals output). Vision-language OCR model. Source: Puter.com  |
+| Qwen-MT Turbo | 2025-??-?? | $0.16 | $0.49 | standard_list | 1,000,000 | https://developer.puter.com/tutorials/qwen-api-pricing/ | Qwen-MT Turbo at $0.16/$0.49 per 1M tokens, 1M context window. Translation model (machine translation). Source: Puter.co |
+| Qwen2.5 72B (hosted: DeepInfra) | 2024-12-?? | $0.23 | $0.40 | standard_list | 128,000 | https://deepinfra.com/blog/qwen-api-pricing-2026-guide | Qwen2.5 72B on DeepInfra at $0.23/$0.40 per 1M tokens (same pricing as Llama 3.3 70B on DeepInfra). Open-weight model. S |
 
 ---
 
@@ -272,6 +383,67 @@ These are the **latest standard_list price points** for each model as loaded in 
 | xAI / Grok | Grok 3 Mini | 2026-04-?? | $3.00 | $5.00 | 128,000 | https://www.getapipulse.com/blog-q2-2026-pricing-report.html |
 | xAI / Grok | Grok 4.3 | 2026-05-?? | $0.20 | $0.80 | 2,000,000 | https://chatforest.com/guides/llm-api-pricing-comparison-2026/ |
 | xAI / Grok | Grok Build 0.1 | 2026-05-?? | $1.00 | $2.00 | 256,000 | https://chatforest.com/guides/llm-api-pricing-comparison-2026/ |
+| Mistral AI | Mistral Large 3 (2512) | 2025-12-?? | $0.50 | $1.50 | 262,144 | https://mistral.ai/pricing/api/ |
+| Mistral AI | Mistral Large 2.1 (2411) | 2024-11-?? | $2.00 | $6.00 | 131,072 | https://pricepertoken.com/pricing-page/provider/mistral-ai |
+| Mistral AI | Mistral Large 2.0 (2407) | 2024-07-?? | $2.00 | $6.00 | 131,072 | https://pricepertoken.com/pricing-page/provider/mistral-ai |
+| Mistral AI | Mistral Large 1.0 (2402) | 2024-02-?? | $2.00 | $6.00 | 128,000 | https://docs.mistral.ai/models |
+| Mistral AI | Mistral Medium 3.5 | 2026-04-?? | $1.50 | $7.50 | 256,000 | https://mistral.ai/pricing/api/ |
+| Mistral AI | Mistral Medium 3.1 (2508) | 2025-08-?? | $0.40 | $2.00 | 131,072 | https://pricepertoken.com/pricing-page/provider/mistral-ai |
+| Mistral AI | Mistral Medium 3 (2505) | 2025-05-?? | $0.40 | $2.00 | 131,072 | https://pricepertoken.com/pricing-page/provider/mistral-ai |
+| Mistral AI | Mistral Medium 1.0 (2312) | 2023-12-?? | $0.40 | $2.00 | 131,072 | https://docs.mistral.ai/models |
+| Mistral AI | Mistral Small 4 (2603) | 2026-03-?? | $0.15 | $0.60 | 128,000 | https://mistral.ai/pricing/api/ |
+| Mistral AI | Mistral Small 3.2 (2506) | 2025-06-?? | $0.08 | $0.20 | 128,000 | https://pricepertoken.com/pricing-page/provider/mistral-ai |
+| Mistral AI | Mistral Small 3.1 (2503) | 2025-03-?? | $0.10 | $0.30 | 128,000 | https://pricepertoken.com/pricing-page/provider/mistral-ai |
+| Mistral AI | Mistral Small 3.0 (2501) | 2025-01-?? | $0.10 | $0.30 | 128,000 | https://pricepertoken.com/pricing-page/provider/mistral-ai |
+| Mistral AI | Mistral Small 2.0 (2409) | 2024-09-?? | $0.10 | $0.30 | 128,000 | https://pricepertoken.com/pricing-page/provider/mistral-ai |
+| Mistral AI | Mistral Small 1.0 (2402) | 2024-02-?? | $0.10 | $0.30 | 128,000 | https://docs.mistral.ai/models |
+| Mistral AI | Mistral Small 3.2 24B | 2025-06-?? | $0.07 | $0.20 | 131,072 | https://pricepertoken.com/pricing-page/provider/mistral-ai |
+| Mistral AI | Mistral Nemo | 2024-07-?? | $0.02 | $0.03 | 131,072 | https://mistral.ai/pricing/api/ |
+| Mistral AI | Codestral 2508 | 2025-08-?? | $0.30 | $0.90 | 256,000 | https://mistral.ai/pricing/api/ |
+| Mistral AI | Devstral 2 2512 | 2025-12-?? | $0.40 | $0.90 | 262,144 | https://pricepertoken.com/pricing-page/provider/mistral-ai |
+| Mistral AI | Ministral 3 8B (2512) | 2025-12-?? | $0.15 | $0.15 | 262,144 | https://mistral.ai/pricing/api/ |
+| Mistral AI | Ministral 3 3B (2512) | 2025-12-?? | $0.10 | $0.10 | 262,144 | https://mistral.ai/pricing/api/ |
+| Cohere | Command (legacy) | 2023-??-?? | $1.00 | $2.00 | 4,096 | https://cohere.com/pricing |
+| Cohere | Command-light (legacy) | 2023-??-?? | $0.30 | $0.60 | 4,096 | https://cohere.com/pricing |
+| Cohere | Command R 03-2024 | 2024-03-?? | $0.50 | $1.50 | 128,000 | https://cohere.com/pricing |
+| Cohere | Command R+ 04-2024 | 2024-04-?? | $3.00 | $15.00 | 128,000 | https://cohere.com/pricing |
+| Cohere | Command R+ 08-2024 | 2024-08-?? | $2.50 | $10.00 | 128,000 | https://cohere.com/pricing |
+| Cohere | Command R 08-2024 | 2024-08-?? | $0.15 | $0.60 | 128,000 | https://cohere.com/pricing |
+| Cohere | Command R7B 12-2024 | 2024-12-?? | $0.04 | $0.15 | 128,000 | https://cohere.com/pricing |
+| Cohere | Command A | 2025-??-?? | $2.50 | $10.00 | 256,000 | https://cohere.com/pricing |
+| Cohere | Aya Expanse 8B / 32B | 2025-??-?? | $0.50 | $1.50 | 128,000 | https://cohere.com/pricing |
+| Meta Llama (hosted) | Llama 3.1 8B (hosted: Groq) | 2024-07-?? | $0.05 | $0.08 | 128,000 | https://www.aipricing.guru/meta-pricing/ |
+| Meta Llama (hosted) | Llama 3.1 8B (hosted: Together AI) | 2024-07-?? | $0.18 | $0.18 | 128,000 | https://www.aipricing.guru/meta-pricing/ |
+| Meta Llama (hosted) | Llama 3.1 8B (hosted: Fireworks) | 2024-07-?? | $0.20 | $0.20 | 128,000 | https://www.aipricing.guru/meta-pricing/ |
+| Meta Llama (hosted) | Llama 3.3 70B (hosted: DeepInfra) | 2024-12-?? | $0.23 | $0.40 | 128,000 | https://www.aipricing.guru/meta-pricing/ |
+| Meta Llama (hosted) | Llama 3.3 70B (hosted: Groq) | 2024-12-?? | $0.59 | $0.79 | 128,000 | https://www.aipricing.guru/meta-pricing/ |
+| Meta Llama (hosted) | Llama 3.3 70B (hosted: Together AI) | 2024-12-?? | $0.88 | $0.88 | 128,000 | https://www.aipricing.guru/meta-pricing/ |
+| Meta Llama (hosted) | Llama 3.3 70B (hosted: Fireworks) | 2024-12-?? | $0.90 | $0.90 | 128,000 | https://www.aipricing.guru/meta-pricing/ |
+| Meta Llama (hosted) | Llama 3.1 405B (hosted: Fireworks) | 2024-07-?? | $3.00 | $3.00 | 131,072 | https://www.aipricing.guru/meta-pricing/ |
+| Meta Llama (hosted) | Llama 3.1 405B (hosted: Together AI) | 2024-07-?? | $3.50 | $3.50 | 131,072 | https://www.aipricing.guru/meta-pricing/ |
+| Meta Llama (hosted) | Llama 4 Scout (hosted: Groq) | 2025-??-?? | $0.11 | $0.34 | 10,000,000 | https://www.getapipulse.com/blog-state-of-llm-pricing-may-2026.html |
+| Meta Llama (hosted) | Llama 4 Maverick (hosted: Groq) | 2025-??-?? | $0.20 | $0.60 | 10,000,000 | https://www.getapipulse.com/blog-state-of-llm-pricing-may-2026.html |
+| Alibaba / Qwen | Qwen3-Max | 2025-??-?? | $1.20 | $6.00 | 262,144 | https://deepinfra.com/blog/qwen-api-pricing-2026-guide |
+| Alibaba / Qwen | Qwen3-Max Thinking | 2025-??-?? | $0.78 | $3.90 | 262,144 | https://developer.puter.com/tutorials/qwen-api-pricing/ |
+| Alibaba / Qwen | Qwen3 Max | 2026-??-?? | $2.00 | $6.00 | 1,000,000 | https://developer.puter.com/tutorials/qwen-api-pricing/ |
+| Alibaba / Qwen | Qwen3.6 Max Preview | 2025-??-?? | $1.30 | $7.80 | 262,144 | https://developer.puter.com/tutorials/qwen-api-pricing/ |
+| Alibaba / Qwen | Qwen3.7 Plus | 2026-??-?? | $0.32 | $1.28 | 1,000,000 | https://developer.puter.com/tutorials/qwen-api-pricing/ |
+| Alibaba / Qwen | Qwen3.7 Max | 2026-??-?? | $1.25 | $3.75 | 1,000,000 | https://developer.puter.com/tutorials/qwen-api-pricing/ |
+| Alibaba / Qwen | Qwen3.8 Max | 2026-08-03 | $2.00 | $6.00 | 1,000,000 | https://developer.puter.com/tutorials/qwen-api-pricing/ |
+| Alibaba / Qwen | Qwen3.8 Flash | 2026-08-26 | $0.14 | $0.42 | 1,000,000 | https://developer.puter.com/tutorials/qwen-api-pricing/ |
+| Alibaba / Qwen | Qwen3.6 Flash | 2025-??-?? | $0.19 | $1.13 | 1,000,000 | https://developer.puter.com/tutorials/qwen-api-pricing/ |
+| Alibaba / Qwen | Qwen3.6 Plus | 2025-??-?? | $0.50 | $3.00 | 1,000,000 | https://developer.puter.com/tutorials/qwen-api-pricing/ |
+| Alibaba / Qwen | Qwen3.5 Plus | 2025-??-?? | $0.50 | $3.00 | 1,000,000 | https://qwen.ai/apiplatform |
+| Alibaba / Qwen | Qwen3 Flash | 2025-??-?? | $0.05 | $0.40 | 1,000,000 | https://developer.puter.com/tutorials/qwen-api-pricing/ |
+| Alibaba / Qwen | Qwen3 Coder 480B A35B | 2025-??-?? | $1.50 | $7.50 | 1,000,000 | https://developer.puter.com/tutorials/qwen-api-pricing/ |
+| Alibaba / Qwen | Qwen3 Coder Next | 2025-??-?? | $0.11 | $0.80 | 1,000,000 | https://developer.puter.com/tutorials/qwen-api-pricing/ |
+| Alibaba / Qwen | Qwen3-VL Plus | 2025-??-?? | $0.20 | $1.60 | 131,027 | https://developer.puter.com/tutorials/qwen-api-pricing/ |
+| Alibaba / Qwen | Qwen3 VL 235B A22B | 2025-??-?? | $0.70 | $2.80 | 131,027 | https://developer.puter.com/tutorials/qwen-api-pricing/ |
+| Alibaba / Qwen | Qwen3.5 Omni Flash | 2025-??-?? | $0.43 | $1.66 | 1,000,000 | https://developer.puter.com/tutorials/qwen-api-pricing/ |
+| Alibaba / Qwen | Qwen3.5 Omni Plus | 2026-??-?? | $1.00 | $6.00 | 1,000,000 | https://www.alibabacloud.com/help/en/model-studio/models |
+| Alibaba / Qwen | Qwen VL OCR | 2025-??-?? | $0.72 | $0.72 | 131,027 | https://developer.puter.com/tutorials/qwen-api-pricing/ |
+| Alibaba / Qwen | Qwen-MT Turbo | 2025-??-?? | $0.16 | $0.49 | 1,000,000 | https://developer.puter.com/tutorials/qwen-api-pricing/ |
+| Alibaba / Qwen | Qwen2.5 72B (hosted: DeepInfra) | 2024-12-?? | $0.23 | $0.40 | 128,000 | https://deepinfra.com/blog/qwen-api-pricing-2026-guide |
 
 ---
 
