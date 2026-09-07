@@ -1,0 +1,368 @@
+# AI Pricing Research — Consolidated Report
+
+**Generated:** 2026-09-07 — from `kb/price_points_*.jsonl` (111 entries across 5 providers)
+
+---
+
+## Table of Contents
+
+- [1. How to read this report](#1-how-to-read-this-report)
+- [2. OpenAI pricing history](#2-openai-pricing-history)
+- [3. Anthropic pricing history](#3-anthropic-pricing-history)
+- [4. Google / Gemini pricing history](#4-google--gemini-pricing-history)
+- [5. DeepSeek pricing history](#5-deepseek-pricing-history)
+- [6. xAI / Grok pricing history](#6-xai--grok-pricing-history)
+- [7. Cross-provider comparison — current prices (late 2026 snapshot)](#7-cross-provider-comparison--current-prices-late-2026-snapshot)
+- [8. Market data](#8-market-data)
+- [9. Sources](#9-sources)
+
+---
+
+## 1. How to read this report
+
+Each price entry is presented as a row in a table. The columns are:
+
+| Field | Meaning |
+|-------|---------|
+| **Model** | Exact model name and version as published |
+| **Effective date** | When the price took effect (not article date) |
+| **Input $/M tok** | Standard list input price per 1M tokens |
+| **Output $/M tok** | Standard list output price per 1M tokens |
+| **Price type** | `standard_list`, `batch`, `cache`, `promo`, `tiered`, `free` |
+| **Context** | Context window at this price point (if known) |
+| **Source** | URL where this price was read |
+| **Notes** | Version notes, caveats, source-type, discrepancies |
+
+**Important conventions:**
+
+- Price series are **not** treated as continuous across model generations. Each model name/version is pinned explicitly.
+- List prices (input and output separate) are the primary basis. Batch, cache, promo, and blended rates are tagged separately.
+- Effective dates are used, not publication dates.
+- Source URLs are attached to every entry.
+
+---
+
+## 2 OpenAI pricing history
+
+**37 price points** loaded from `kb/price_points_openai.jsonl`.
+
+| Model | Effective date | Input $/M tok | Output $/M tok | Price type | Context | Source | Notes |
+|-------|---------------|---------------|----------------|------------|---------|--------|-------|
+| GPT-3 | 2020-06-11 | $6.00 | $12.00 | standard_list | 2,049 | https://www.deploybase.ai/articles/cost-per-token-over-time-how-llm-api-pricing-has-dropped | $0.006 per 1K prompt tokens, $0.012 per 1K completion tokens. Cited by DeployBase historical timeline. No OpenAI pricing |
+| GPT-3.5 Turbo | 2022-11-14 | $2.00 | $2.00 | standard_list | 4,096 | https://kickllm.com/research/llm-pricing-history.html | Pricing remained relatively stable through early 2022 per DeployBase. GPT-3.5 Turbo launched Nov 2022. Cited by multiple |
+| GPT-3.5 Turbo | 2023-01-?? | $1.50 | $2.00 | standard_list | — | https://tokencost.app/blog/ai-price-index | GPT-3.5 Turbo price cut in early 2023. Output unchanged at $2.00. DeployBase cites $0.0015 per prompt token ($1.50/M) at |
+| GPT-4 | 2023-03-14 | $30.00 | $60.00 | standard_list | 8,192 | https://tokencost.app/blog/ai-price-index | GPT-4 launch at $30/$60 per 1M tokens. Universal consensus across all sources as the baseline for the price-collapse nar |
+| GPT-3.5 Turbo | 2023-03-?? | $0.50 | $1.50 | standard_list | — | https://tokencost.app/blog/ai-price-index | GPT-3.5 Turbo cut to $0.50/$1.50 per 1M around March 2023. TokenMix cites this as 60x cheaper than GPT-4's launch input  |
+| GPT-4 Turbo | 2023-11-06 | $10.00 | $30.00 | standard_list | 128,000 | https://tokencost.app/blog/ai-price-index | Announced at OpenAI DevDay Nov 6 2023. 3x cheaper than original GPT-4. Context window expanded to 128K. |
+| GPT-3.5 Turbo | 2024-01-01 | $0.50 | $1.50 | standard_list | 16,385 | https://deploybase.ai/articles/cost-per-token-over-time-how-llm-api-pricing-has-dropped | GPT-3.5 Turbo at $0.0005 per prompt token. DeployBase timeline: 2024 saw continued cost-per-token decline. 60x cheaper t |
+| GPT-4o | 2024-05-13 | $5.00 | $15.00 | standard_list | 128,000 | https://pecollective.com/tools/gpt-4o-pricing/ | GPT-4o launched May 13 2024 at $5/$15 per 1M tokens. Multimodal (text+image input, text output). 50% cheaper than GPT-4  |
+| GPT-4o Mini | 2024-07-18 | $0.15 | $0.60 | standard_list | 128,000 | https://pecollective.com/tools/gpt-4o-pricing/ | GPT-4o mini launched July 18 2024 at $0.15/$0.60 per 1M tokens. 97% cheaper than original GPT-4 with comparable quality  |
+| GPT-4o | 2024-10-01 | $2.50 | $10.00 | standard_list | 128,000 | https://pecollective.com/tools/gpt-4o-pricing/ | GPT-4o price cut Oct 2024 to $2.50/$10 per 1M tokens. Made GPT-4o competitive with Claude 3.5 Sonnet at the time. Has no |
+| GPT-4.1 | 2025-01-?? | $2.00 | $8.00 | standard_list | 1,000,000 | https://pecollective.com/tools/gpt-4o-pricing/ | GPT-4.1 launched Jan 2025 at $2/$8 per 1M tokens. Replaced GPT-4o. 1M context window. PE Collective cites this date. |
+| GPT-4.1 Nano | 2025-01-?? | $0.10 | $0.40 | standard_list | — | https://www.metacto.com/blogs/unlocking-the-true-cost-of-openai-api-a-deep-dive-into-usage-integration-and-maintenance | GPT-4.1 Nano at $0.10/$0.40. Cited as cheapest text model in May 2026 pricing guide. Exact launch date not confirmed. |
+| GPT-5 | 2026-04-?? | $1.25 | $10.00 | standard_list | 272,000 | https://www.getapipulse.com/blog-q2-2026-pricing-report.html | GPT-5 launched April 2026 at $1.25/$10 per 1M tokens, 272K context. Compared to Claude 4 Opus ($15/$75). Pricing page: h |
+| GPT-5 mini | 2026-04-?? | $0.25 | $2.00 | standard_list | 272,000 | https://www.getapipulse.com/blog-q2-2026-pricing-report.html | GPT-5 mini at $0.25/$2.00, 272K context. Cheaper than GPT-4o with more context. |
+| GPT-5.4 | 2026-04-?? | $2.50 | $15.00 | standard_list | 128,000 | https://www.cloudzero.com/blog/openai-pricing/ | GPT-5.4 at $2.50/$15. Cited as previous standard model. Pricing page lists it as active as of April 2026. |
+| GPT-5.4 Mini | 2026-04-?? | $0.75 | $4.50 | standard_list | 128,000 | https://www.cloudzero.com/blog/openai-pricing/ | GPT-5.4 Mini at $0.75/$4.50. Cached input $0.075. Budget tier entry in the GPT-5.4 family. |
+| GPT-5.4 Nano | 2026-04-?? | $0.20 | $1.25 | standard_list | 128,000 | https://www.cloudzero.com/blog/openai-pricing/ | GPT-5.4 Nano at $0.20/$1.25. Cached input $0.02. Cheapest legacy OpenAI tier per CloudZero. |
+| GPT-5.4 Codex | 2026-04-?? | $1.75 | $14.00 | standard_list | 128,000 | https://www.cloudzero.com/blog/openai-pricing/ | GPT-5.4 Codex at $1.75/$14.00. Code-specialized. Cached input $0.175. |
+| GPT-5.5 | 2026-04-24 | $5.00 | $30.00 | standard_list | 272,000 | https://www.metacto.com/blogs/unlocking-the-true-cost-of-openai-api-a-deep-dive-into-usage-integration-and-maintenance | GPT-5.5 launched April 24 2026 at $5/$30 per 1M tokens. Prompts over 272K input tokens billed at 2x input / 1.5x output. |
+| GPT-5.5 Pro | 2026-04-24 | $30.00 | $180.00 | standard_list | 128,000 | https://www.metacto.com/blogs/unlocking-the-true-cost-of-openai-api-a-deep-dive-into-usage-integration-and-maintenance | GPT-5.5 Pro at $30/$180 per 1M tokens. Maximum capability. Source: Metacto May 2026. |
+| o3 | 2025-01-?? | $2.00 | $8.00 | standard_list | 200,000 | https://www.metacto.com/blogs/unlocking-the-true-cost-of-openai-api-a-deep-dive-into-usage-integration-and-maintenance | o3 at $2/$8 per 1M tokens, 200K context. Advanced reasoning, multi-step problem solving. |
+| o3-mini | 2025-01-?? | $1.10 | $4.40 | standard_list | 200,000 | https://www.metacto.com/blogs/unlocking-the-true-cost-of-openai-api-a-deep-dive-into-usage-integration-and-maintenance | o3-mini at $1.10/$4.40 per 1M tokens. Lightweight reasoning tasks. May 2026 pricing. |
+| o3-pro | 2025-01-?? | $20.00 | $80.00 | standard_list | 200,000 | https://www.metacto.com/blogs/unlocking-the-true-cost-of-openai-api-a-deep-dive-into-usage-integration-and-maintenance | o3-pro at $20/$80 per 1M tokens. Max reasoning. May 2026 pricing. |
+| o4-mini-2025-04-16 | 2025-04-16 | $4.00 | $16.00 | standard_list | — | https://developers.openai.com/api/docs/pricing | Training at $100/hour. With data sharing: $2.00/$0.50/$8.00. Source: OpenAI pricing page (current). |
+| GPT-5.5 Pro | 2026-04-24 | $30.00 | $180.00 | standard_list | 128,000 | https://developers.openai.com/api/docs/pricing | Current OpenAI pricing page lists GPT-5.5 Pro at $30/$180. May 2026. |
+| GPT-5.6 Sol | 2026-07-09 | $5.00 | $30.00 | standard_list | 1,050,000 | https://www.cloudzero.com/blog/openai-pricing/ | GPT-5.6 Sol launched July 9 2026 GA at $5/$30 per 1M tokens, 1.05M context. Flagship held at same price as GPT-5.5. Clou |
+| GPT-5.6 Terra | 2026-07-09 | $2.00 | $12.00 | standard_list | 1,050,000 | https://www.cloudzero.com/blog/openai-pricing/ | GPT-5.6 Terra at $2/$12, 1.05M context. July 30 2026: 20% cut. Undercuts GPT-5.4 ($2.50/$15). 'If your production worklo |
+| GPT-5.6 Luna | 2026-07-09 | $0.20 | $1.20 | standard_list | 1,050,000 | https://www.cloudzero.com/blog/openai-pricing/ | GPT-5.6 Luna at $0.20/$1.20, 1.05M context. July 30 2026: 80% cut — largest price move since GPT-5 launch. 4x cheaper th |
+| GPT-5.6 Sol | 2026-07-09 | $10.00 | $45.00 | tiered | — | https://www.cloudzero.com/blog/openai-pricing/ | GPT-5.6 Sol long-context pricing. Input doubles above standard context window. |
+| GPT-5.6 Terra | 2026-07-09 | $4.00 | $18.00 | tiered | — | https://www.cloudzero.com/blog/openai-pricing/ | GPT-5.6 Terra long-context pricing. |
+| GPT-5.6 Luna | 2026-07-09 | $0.40 | $1.80 | tiered | — | https://www.cloudzero.com/blog/openai-pricing/ | GPT-5.6 Luna long-context pricing. |
+| GPT-5.6 Sol | 2026-07-09 | $0.50 | — | cache | — | https://www.cloudzero.com/blog/openai-pricing/ | GPT-5.6 family: cache reads at 10% of standard input. Cache writes bill at 1.25x input rate. |
+| GPT-5.5 Pro | 2026-04-24 | $15.00 | $90.00 | batch | — | https://www.metacto.com/blogs/unlocking-the-true-cost-of-openai-api-a-deep-dive-into-usage-integration-and-maintenance | GPT-5.5 Pro batch: $15/$90 per 1M tokens. All OpenAI models get 50% batch discount. |
+| GPT-5.6 Luna | 2026-07-30 | $0.10 | $0.60 | batch | — | https://www.cloudzero.com/blog/openai-pricing/ | GPT-5.6 Luna batch: $0.10/$0.60. Combined with cache can yield up to 95% total savings on qualifying workloads per APISc |
+| chat-latest | 2026-04-?? | $5.00 | $30.00 | standard_list | — | https://developers.openai.com/api/docs/pricing | ChatGPT model endpoint: $5/$30 per 1M tokens. Cached input $0.50. |
+| gpt-5.3-codex | 2026-04-?? | $1.75 | $14.00 | standard_list | — | https://developers.openai.com/api/docs/pricing | Current OpenAI pricing page: GPT-5.3 Codex at $1.75/$14.00. Cached input $0.175. |
+| GPT-5.5 | 2026-04-24 | $2.50 | $15.00 | batch | — | https://www.cloudzero.com/blog/openai-pricing/ | GPT-5.5 batch: $2.50/$15 — identical to standard GPT-5.4. If latency is not critical (results in 24h), batch is the high |
+
+---
+
+## 3 Anthropic pricing history
+
+**27 price points** loaded from `kb/price_points_anthropic.jsonl`.
+
+| Model | Effective date | Input $/M tok | Output $/M tok | Price type | Context | Source | Notes |
+|-------|---------------|---------------|----------------|------------|---------|--------|-------|
+| Claude 1 | 2023-03-14 | $11.02 | $32.68 | standard_list | 9,000 | https://iapi.buzz/blog/anthropic-claude-api-pricing-history.html | Claude 1 API beta opened to early partners March 2023. 9K context window. Pricing reflected limited availability. Deploy |
+| Claude 1.3 / Claude 2 | 2023-07-11 | $11.02 | $32.68 | standard_list | 100,000 | https://claudearchive.com/pricing-history | Claude 2 API offered at same price as Claude 1.3 per claudearchive.com pricing history. 100K context window. Claude 2 la |
+| Claude Instant 1.x | 2023-07-?? | $0.80 | $2.40 | standard_list | — | https://tokencost.app/blog/ai-price-index | Claude Instant 1.x at $0.80/$2.40 per 1M tokens. Cited by TokenCost AI Price Index July 2023 entry. Exact launch date no |
+| Claude 2.1 | 2023-11-21 | $8.00 | $24.00 | standard_list | 200,000 | https://iapi.buzz/blog/anthropic-claude-api-pricing-history.html | Claude 2.1 announced Nov 21 2023. Expanded context to 200K tokens. 27% price cut on input tokens ($11.02 -> $8.00). Tool |
+| Claude 3 Opus | 2024-03-04 | $15.00 | $75.00 | standard_list | 200,000 | https://tokencost.app/blog/ai-price-index | Claude 3 Opus launched March 2024 at $15/$75 per 1M tokens. Frontier model. 200K context window. Part of Claude 3 family |
+| Claude 3 Sonnet | 2024-03-04 | $3.00 | $15.00 | standard_list | 200,000 | https://tokencost.app/blog/ai-price-index | Claude 3 Sonnet launched March 2024 at $3/$15 per 1M tokens. Balanced model. 200K context window. Most popular Anthropic |
+| Claude 3 Haiku | 2024-03-04 | $0.25 | $1.25 | standard_list | 200,000 | https://tokencost.app/blog/ai-price-index | Claude 3 Haiku launched March 2024 at $0.25/$1.25 per 1M tokens. Budget tier. 200K context window. Price increased with  |
+| Claude 3.5 Sonnet | 2024-06-21 | $3.00 | $15.00 | standard_list | 200,000 | https://claudearchive.com/pricing-history | Claude 3.5 Sonnet launched June 21 2024 at $3/$15 per 1M tokens. Same price as Claude 3 Sonnet but improved coding and t |
+| Claude 3.5 Haiku | 2024-10-?? | $0.80 | $4.00 | standard_list | 200,000 | https://iapi.buzz/blog/anthropic-claude-api-pricing-history.html | Claude 3.5 Haiku introduced October 2024 at $0.80/$4.00 per 1M tokens. This is the ONLY time Anthropic raised API prices |
+| Claude 3.5 Sonnet (updated) | 2024-10-?? | $3.00 | $15.00 | standard_list | 200,000 | https://iapi.buzz/blog/anthropic-claude-api-pricing-history.html | Updated Claude 3.5 Sonnet released October 2024 alongside Claude 3.5 Haiku. Same $3/$15 price as original Claude 3.5 Son |
+| Claude Opus 4 | 2025-05-?? | $15.00 | $75.00 | standard_list | 200,000 | https://tokencost.app/blog/ai-price-index | Claude Opus 4 launched May 2025 at $15/$75 per 1M tokens. Frontier model. 200K context window at launch. Later expanded  |
+| Claude Sonnet 4 | 2025-09-?? | $3.00 | $15.00 | standard_list | 200,000 | https://tokencost.app/blog/ai-price-index | Claude Sonnet 4 at $3/$15 per 1M tokens. Maintained same price as Claude 3.5 Sonnet. 200K context window at launch, late |
+| Claude Opus 4.5 | 2025-11-24 | $5.00 | $25.00 | standard_list | 200,000 | https://claudearchive.com/pricing-history | Claude Opus 4.5 launched November 24 2025 at $5/$25 per 1M tokens. 67% cut from Opus 4's $15/$75. 200K context window at |
+| Claude Sonnet 4.5 | 2025-09-29 | $3.00 | $15.00 | standard_list | 200,000 | https://claudearchive.com/pricing-history | Claude Sonnet 4.5 announced September 29 2025. Kept Sonnet 4 pricing at $3/$15 per 1M tokens. 200K context window. Later |
+| Claude Opus 4.6 | 2026-03-13 | $5.00 | $25.00 | standard_list | 1,000,000 | https://apiscout.dev/guides/llm-api-pricing-comparison-2026 | Claude Opus 4.6 GA March 13 2026 at $5/$25 per 1M tokens. 1M context window at standard pricing — flat rate, no surcharg |
+| Claude Sonnet 4.6 | 2026-03-13 | $3.00 | $15.00 | standard_list | 1,000,000 | https://apiscout.dev/guides/llm-api-pricing-comparison-2026 | Claude Sonnet 4.6 at $3/$15 per 1M tokens. 1M context window at standard pricing — flat rate, no surcharge above 200K to |
+| Claude Haiku 4.5 | 2026-03-13 | $1.00 | $5.00 | standard_list | 200,000 | https://www.cloudzero.com/blog/claude-pricing/ | Claude Haiku 4.5 at $1/$5 per 1M tokens. 200K context window. Recently updated from Claude 3.5 Haiku ($0.80/$4.00). Offe |
+| Claude Sonnet 5 | 2026-06-30 | $2.00 | $10.00 | promo | 1,000,000 | https://claudearchive.com/pricing-history | Claude Sonnet 5 launched June 30 2026 with introductory pricing of $2/$10 per 1M tokens through August 31 2026. Was sche |
+| Claude Sonnet 5 | 2026-08-11 | $2.00 | $10.00 | standard_list | 1,000,000 | https://www.cloudzero.com/blog/claude-pricing/ | Anthropic made Claude Sonnet 5's $2/$10 rate PERMANENT on August 11 2026. Cancelled the planned September 1 increase to  |
+| Claude Opus 5 | 2026-08-?? | $5.00 | $25.00 | standard_list | 1,000,000 | https://www.cloudzero.com/blog/claude-pricing/ | Claude Opus 5 at $5/$25 per 1M tokens. Same rate across five straight releases (Opus 4.5 through Opus 5). 1M context win |
+| Claude Fable 5 | 2026-08-?? | $10.00 | $50.00 | standard_list | 1,000,000 | https://www.cloudzero.com/blog/claude-pricing/ | Claude Fable 5 at $10/$50 per 1M tokens. Premium tier. 1M context window. Shares rates with limited-availability Mythos  |
+| Claude Opus 5 | 2026-08-?? | $2.50 | $12.50 | batch | — | https://www.cloudzero.com/blog/claude-pricing/ | Claude Opus 5 batch rate: $2.50/$12.50 per 1M tokens. 50% off standard $5/$25. Nightly pipelines, bulk classification, c |
+| Claude Haiku 4.5 | 2026-08-?? | $0.50 | $2.50 | batch | — | https://www.cloudzero.com/blog/claude-pricing/ | Claude Haiku 4.5 batch rate: $0.50/$2.50 per 1M tokens. 50% off standard $1/$5. Source: CloudZero Claude pricing. |
+| Claude Sonnet 4.6 | 2026-03-13 | $0.30 | — | cache | — | https://www.cloudzero.com/blog/claude-pricing/ | Claude Sonnet 4.6 cached reads at $0.30 per 1M tokens — 90% discount from standard $3.00 input. Applies to cached prompt |
+| Claude Opus 4.8 | 2026-08-?? | $30.00 | $150.00 | promo | — | https://www.cloudzero.com/blog/claude-pricing/ | Claude Opus 4.8 fast mode at $30/$150 per 1M tokens — 6x standard rates. For latency-sensitive workloads. Source: CloudZ |
+| Claude Opus 4.8 | 2026-08-?? | $5.50 | $27.50 | tiered | — | https://mem0.ai/blog/anthropic-claude-pricing | US-only inference premium: 1.1x standard rates. Source: Mem0 Anthropic Claude pricing. |
+| Claude (web search tool) | 2026-05-?? | — | — | other | — | https://mem0.ai/blog/anthropic-claude-pricing | Anthropic web search tool: $10 per 1,000 searches. Separate from model token pricing. Source: Mem0 Anthropic Claude pric |
+
+---
+
+## 4 Google / Gemini pricing history
+
+**31 price points** loaded from `kb/price_points_google.jsonl`.
+
+| Model | Effective date | Input $/M tok | Output $/M tok | Price type | Context | Source | Notes |
+|-------|---------------|---------------|----------------|------------|---------|--------|-------|
+| Gemini 1.0 Pro | 2023-12-06 | $0.50 | $1.50 | standard_list | 32,768 | https://tokencost.app/blog/ai-price-index | Gemini 1.0 Pro launched December 6 2023 at $0.50/$1.50 per 1M tokens. Google's first Gemini API pricing. 32K context win |
+| Gemini 1.0 Pro | 2024-01-01 | $0.25 | $0.50 | standard_list | 32,768 | https://deploybase.ai/articles/llm-pricing-history-how-costs-dropped-99-since-2023 | Gemini 1.0 Pro cut to $0.00025 per 1K input tokens ($0.25/M) and $0.0005 per 1K output tokens ($0.50/M) in Q1 2024. Depl |
+| Gemini 1.5 Pro | 2024-02-01 | $1.25 | $5.00 | standard_list | 128,000 | https://tokencost.app/blog/ai-price-index | Gemini 1.5 Pro launched February 2024 at $1.25/$5.00 per 1M tokens, 128K context window. Later expanded to 2M+ context w |
+| Gemini 1.5 Flash | 2024-02-01 | $0.35 | $0.53 | standard_list | 128,000 | https://tokencost.app/blog/ai-price-index | Gemini 1.5 Flash launched February 2024 at $0.35/$0.53 per 1M tokens. 128K context window. Fast, cheap. Later underwent  |
+| Gemini 1.5 Flash | 2024-08-01 | $0.07 | $0.30 | standard_list | 128,000 | https://tokencost.app/blog/ai-price-index | Gemini 1.5 Flash cut to $0.075/$0.30 per 1M tokens in August 2024. 78% reduction from $0.35/$0.53. Source: TokenCost AI  |
+| Gemini 1.5 Pro | 2024-10-01 | $1.25 | $5.00 | standard_list | 2,000,000 | https://tokencost.app/blog/ai-price-index | Gemini 1.5 Pro pricing noted at $1.25/$5.00 in October 2024 AI Price Index. 64% reduction in output from original $1.25/ |
+| Gemini 2.0 Flash | 2025-12-01 | $0.10 | $0.40 | standard_list | 1,000,000 | https://tokencost.app/blog/ai-price-index | Gemini 2.0 Flash at $0.10/$0.40 per 1M tokens, 1M context window. Very cheap. Launched December 2025. Source: TokenCost  |
+| Gemini 2.0 Flash-Lite | 2025-12-?? | $0.07 | $0.30 | standard_list | 1,000,000 | https://apiscout.dev/guides/llm-api-pricing-comparison-2026 | Gemini 2.0 Flash-Lite at $0.075/$0.30 per 1M tokens. Ultra-budget. 1M context window. Cheaper than Gemini 2.0 Flash but  |
+| Gemini 2.5 Pro | 2025-06-?? | $1.25 | $10.00 | standard_list | 1,000,000 | https://www.getapipulse.com/blog-q2-2026-pricing-report.html | Gemini 2.5 Pro at $1.25/$10 per 1M tokens, 1M context window. Best value premium model — 12x cheaper than Claude 4 Opus  |
+| Gemini 2.5 Pro | 2025-06-?? | $2.50 | $15.00 | tiered | — | https://ai.google.dev/gemini-api/docs/pricing | Gemini 2.5 Pro long-context pricing from Google developer pricing page. Input doubles from $1.25 to $2.50 above 200K; ou |
+| Gemini 2.5 Flash | 2025-06-?? | $0.30 | $2.50 | standard_list | 1,000,000 | https://ai.google.dev/gemini-api/docs/pricing | Gemini 2.5 Flash at $0.30/$2.50 per 1M tokens. 1M context window. Text/image/video input at $0.30; audio input at $1.00. |
+| Gemini 2.5 Flash-Lite | 2025-06-?? | $0.10 | $0.40 | standard_list | 1,000,000 | https://ai.google.dev/gemini-api/docs/pricing | Gemini 2.5 Flash-Lite at $0.10/$0.40 per 1M tokens, 1M context window. Cheapest model — $0.01 per 1K input. Text/image/v |
+| Gemini 2.5 Flash | 2025-06-?? | $0.03 | — | cache | — | https://ai.google.dev/gemini-api/docs/pricing | Gemini 2.5 Flash cached input at $0.03 per 1M tokens. 90% discount from $0.30 standard input. Context caching storage: $ |
+| Gemini 2.5 Pro | 2025-06-?? | $0.12 | — | cache | — | https://ai.google.dev/gemini-api/docs/pricing | Gemini 2.5 Pro cached input at $0.125 per 1M tokens (≤200K tier). 90% discount from $1.25 standard input. Above 200K cac |
+| Gemini 2.5 Flash-Lite | 2025-06-?? | $0.01 | — | cache | — | https://ai.google.dev/gemini-api/docs/pricing | Gemini 2.5 Flash-Lite cached input at $0.01 per 1M tokens. 90% discount from $0.10 standard input. Source: https://ai.go |
+| Gemini 2.5 Pro | 2025-06-?? | $0.62 | $5.00 | batch | — | https://ai.google.dev/gemini-api/docs/pricing | Gemini 2.5 Pro batch: 50% off standard. ≤200K input: $0.625/$5.00 (50% of $1.25/$10.00). >200K input: $1.25/$7.50 (50% o |
+| Gemini 2.5 Flash-Lite | 2025-06-?? | $0.05 | $0.20 | batch | — | https://ai.google.dev/gemini-api/docs/pricing | Gemini 2.5 Flash-Lite batch: $0.05/$0.20 per 1M tokens. 50% off standard $0.10/$0.40. Cheapest batch rate of any major p |
+| Gemini 3.1 Pro Preview | 2026-04-?? | $2.00 | $12.00 | standard_list | 2,000,000 | https://ai.google.dev/gemini-api/docs/pricing | Gemini 3.1 Pro Preview at $2.00/$12.00 per 1M tokens (≤200K input). 2M context window. Tiered above 200K: $4.00/$18.00.  |
+| Gemini 3.1 Pro Preview | 2026-04-?? | $4.00 | $18.00 | tiered | — | https://ai.google.dev/gemini-api/docs/pricing | Gemini 3.1 Pro Preview long-context pricing. Input doubles from $2.00 to $4.00 above 200K; output increases from $12.00  |
+| Gemini 3 Flash Preview | 2026-04-?? | $0.50 | $3.00 | standard_list | 1,000,000 | https://ai.google.dev/gemini-api/docs/pricing | Gemini 3 Flash Preview at $0.50/$3.00 per 1M tokens. Text/image/video input at $0.50; audio input at $1.00. 1M context w |
+| Gemini 3.5 Flash | 2026-05-19 | $1.50 | $9.00 | standard_list | 1,000,000 | https://www.metacto.com/blogs/the-true-cost-of-google-gemini-a-guide-to-api-pricing-and-integration | Gemini 3.5 Flash launched May 19 2026 (Google I/O) at $1.50/$9.00 per 1M tokens. 1M context window, 64K output, free tie |
+| Gemini 3.5 Flash | 2026-05-19 | $0.15 | — | cache | — | https://chatforest.com/guides/llm-api-pricing-comparison-2026/ | Gemini 3.5 Flash cached input at $0.15 per 1M tokens — 90% discount from $1.50 standard input. 1M context window. Source |
+| Gemini 3.5 Flash | 2026-05-19 | $0.75 | $4.50 | batch | — | https://ai.google.dev/gemini-api/docs/pricing | Gemini 3.5 Flash batch/flex rate: $0.75/$4.50 per 1M tokens. 50% off standard $1.50/$9.00. Source: https://ai.google.dev |
+| Gemini 3.1 Pro Preview | 2026-04-?? | $1.00 | $6.00 | batch | — | https://ai.google.dev/gemini-api/docs/pricing | Gemini 3.1 Pro Preview batch: 50% off standard. Source: https://ai.google.dev/gemini-api/docs/pricing (Gemini 3.1 Pro se |
+| Gemini 3.1 Flash-Lite | 2026-04-?? | $0.25 | $1.50 | standard_list | 1,000,000 | https://ai.google.dev/gemini-api/docs/pricing | Gemini 3.1 Flash-Lite at $0.25/$1.50 per 1M tokens. Text/image/video input at $0.25; audio input at $0.50. 1M context wi |
+| Gemini 3.8 Flash | 2026-04-?? | $0.75 | $3.75 | standard_list | 1,000,000 | https://ai.google.dev/gemini-api/docs/pricing | Gemini 3.8 Flash Standard tier: $0.75/$3.75 per 1M tokens through December 31 2026. Text/image/video input at $0.75; aud |
+| Gemini 3.8 Flash | 2027-01-01 | $1.50 | $7.50 | standard_list | 1,000,000 | https://ai.google.dev/gemini-api/docs/pricing | Gemini 3.8 Flash starting January 1 2027: $1.50/$7.50 per 1M tokens (up from $0.75/$3.75). Input doubles; output doubles |
+| Gemini 3.8 Flash | 2026-04-?? | $0.07 | — | cache | — | https://ai.google.dev/gemini-api/docs/pricing | Gemini 3.8 Flash cached input rate: $0.075/1M tokens through Dec 31 2026 (90% discount from $0.75). Starting Jan 1 2027: |
+| Gemini 3.8 Flash | 2026-04-?? | $1.35 | $6.75 | standard_list | 1,000,000 | https://ai.google.dev/gemini-api/docs/pricing | Gemini 3.8 Flash Priority tier through Dec 31 2026: $1.35/$6.75 per 1M tokens. Starting Jan 1 2027: $2.70/$13.50 (double |
+| Gemini 3.1 Pro Preview | 2026-04-01 | $2.00 | $12.00 | standard_list | — | — | Gemini 3.1 Pro and 2.5 Pro removed from free tier April 1 2026 — now paid-only. Original free tier had been available fo |
+| Gemini 2.5 Flash-Lite | 2026-04-01 | $0.10 | $0.40 | free | — | — | Gemini 2.5 Flash-Lite free tier: 1,500 RPD (requests per day) since April 2026 free tier restrictions. Text/image/video  |
+
+---
+
+## 5 DeepSeek pricing history
+
+**11 price points** loaded from `kb/price_points_deepseek.jsonl`.
+
+| Model | Effective date | Input $/M tok | Output $/M tok | Price type | Context | Source | Notes |
+|-------|---------------|---------------|----------------|------------|---------|--------|-------|
+| DeepSeek V2 | 2023-12-01 | $0.14 | $0.28 | standard_list | 128,000 | https://deploybase.ai/articles/llm-pricing-history-how-costs-dropped-99-since-2023 | DeepSeek V2 launched December 2023 at $0.14/$0.28 per 1M tokens. 128K context window. Cheaper than GPT-4o ($5/$15) by 35 |
+| DeepSeek V3 | 2024-12-01 | $0.27 | $1.10 | standard_list | 128,000 | https://tokencost.app/blog/ai-price-index | DeepSeek V3 launched December 2024 at $0.27/$1.10 per 1M tokens. 128K context window. Frontier-quality open-weight model |
+| DeepSeek V3.2 | 2025-12-?? | $0.28 | $0.42 | standard_list | 128,000 | https://apiscout.dev/guides/llm-api-pricing-comparison-2026 | DeepSeek V3.2 at $0.28/$0.42 per 1M tokens. 128K context window. 90% prompt cache discount drops effective input cost to |
+| DeepSeek V3.2 | 2025-12-?? | $0.03 | — | cache | — | https://apiscout.dev/guides/llm-api-pricing-comparison-2026 | DeepSeek V3.2 90% cache discount: effective input $0.028/MTok vs $0.28 standard. Comparable to Gemini 3 Flash cached rat |
+| DeepSeek R1 | 2025-01-?? | $0.55 | $2.19 | standard_list | 128,000 | https://apiscout.dev/guides/llm-api-pricing-comparison-2026 | DeepSeek R1 at $0.55/$2.19 per 1M tokens. Reasoning model. 128K context window. Cheaper reasoning than OpenAI's o-series |
+| DeepSeek V4 Pro | 2026-01-01 | $0.66 | $1.98 | standard_list | 1,000,000 | https://chatforest.com/guides/llm-api-pricing-comparison-2026/ | DeepSeek V4 Pro launched early 2026 at $0.66/$1.98 per 1M tokens, 1M context window. Near-budget pricing with premium ca |
+| DeepSeek V4 Pro | 2026-05-25 | $0.43 | $0.87 | standard_list | 1,000,000 | https://chatforest.com/guides/llm-api-pricing-comparison-2026/ | DeepSeek V4 Pro permanent rate: $0.435/$0.87 per 1M tokens, 1M context window. 34% cut from $0.66/$1.98. Permanent rate  |
+| DeepSeek V4 Flash | 2026-01-01 | $0.22 | $0.28 | standard_list | 1,000,000 | https://www.getapipulse.com/blog-state-of-llm-pricing-may-2026.html | DeepSeek V4 Flash at $0.22/$0.28 per 1M tokens, 1M context window. Highest throughput/cost ratio. Source: APIpulse State |
+| DeepSeek V4 Flash | 2026-01-?? | $0.14 | $0.28 | standard_list | 1,000,000 | https://chatforest.com/guides/llm-api-pricing-comparison-2026/ | DeepSeek V4 Flash cut to $0.14/$0.28 per 1M tokens. 1M context window. Output matches GPT-4o mini's $0.60 but at less th |
+| DeepSeek V4 Flash | 2026-01-?? | $0.07 | $0.14 | batch | — | https://chatforest.com/guides/llm-api-pricing-comparison-2026/ | DeepSeek V4 Flash batch: $0.07/$0.14 per 1M tokens. 50% off standard. 1M context. Source: ChatForest LLM API pricing com |
+| DeepSeek V4 Pro | 2026-05-25 | $0.22 | $0.43 | batch | — | https://chatforest.com/guides/llm-api-pricing-comparison-2026/ | DeepSeek V4 Pro batch: $0.2175/$0.435 per 1M tokens. 50% off permanent rate. 1M context. Undercuts GPT-5 batch ($0.625/$ |
+
+---
+
+## 6 xAI / Grok pricing history
+
+**5 price points** loaded from `kb/price_points_xai.jsonl`.
+
+| Model | Effective date | Input $/M tok | Output $/M tok | Price type | Context | Source | Notes |
+|-------|---------------|---------------|----------------|------------|---------|--------|-------|
+| Grok 3 | 2025-04-01 | $3.00 | $15.00 | standard_list | 128,000 | https://apiscout.dev/guides/llm-api-pricing-comparison-2026 | Grok 3 launched April 2025 at $3/$15 per 1M tokens, 128K context window. xAI's flagship model. Included real-time web ac |
+| Grok 3 | 2026-05-02 | $30.00 | $150.00 | standard_list | 128,000 | https://www.getapipulse.com/blog-state-of-llm-pricing-may-2026.html | Grok 3 increased 10x on May 2 2026 from $3/$15 to $30/$150 per 1M tokens — the BIGGEST price hike in the market at that  |
+| Grok 3 Mini | 2026-04-?? | $3.00 | $5.00 | standard_list | 128,000 | https://www.getapipulse.com/blog-q2-2026-pricing-report.html | Grok 3 Mini at $3/$5 per 1M tokens, 128K context window. Cheaper output than Grok 3 at $30/$150 post-increase. But input |
+| Grok 4.3 | 2026-05-?? | $0.20 | $0.80 | standard_list | 2,000,000 | https://chatforest.com/guides/llm-api-pricing-comparison-2026/ | Grok 4.3 at $0.20/$0.80 per 1M tokens, 2M context window. Largest context window among priced models at time of launch.  |
+| Grok Build 0.1 | 2026-05-?? | $1.00 | $2.00 | standard_list | 256,000 | https://chatforest.com/guides/llm-api-pricing-comparison-2026/ | Grok Build 0.1 at $1/$2 per 1M tokens, 256K context window. Agentic coding only variant. Competes with GPT-5.3 Codex ($1 |
+
+---
+
+## 7. Cross-provider comparison — current prices (late 2026 snapshot)
+
+These are the **latest standard_list price points** for each model as loaded in the KB. Batch, cache, promo, and tiered variants are excluded here for readability; see the per-provider sections above for those.
+
+| Provider | Model | Effective date | Input $/M tok | Output $/M tok | Context | Source |
+|----------|-------|----------------|---------------|----------------|---------|--------|
+| OpenAI | GPT-3 | 2020-06-11 | $6.00 | $12.00 | 2,049 | https://www.deploybase.ai/articles/cost-per-token-over-time-how-llm-api-pricing-has-dropped |
+| OpenAI | GPT-3.5 Turbo | 2022-11-14 | $2.00 | $2.00 | 4,096 | https://kickllm.com/research/llm-pricing-history.html |
+| OpenAI | GPT-4 | 2023-03-14 | $30.00 | $60.00 | 8,192 | https://tokencost.app/blog/ai-price-index |
+| OpenAI | GPT-4 Turbo | 2023-11-06 | $10.00 | $30.00 | 128,000 | https://tokencost.app/blog/ai-price-index |
+| OpenAI | GPT-4o | 2024-05-13 | $5.00 | $15.00 | 128,000 | https://pecollective.com/tools/gpt-4o-pricing/ |
+| OpenAI | GPT-4o Mini | 2024-07-18 | $0.15 | $0.60 | 128,000 | https://pecollective.com/tools/gpt-4o-pricing/ |
+| OpenAI | GPT-4.1 | 2025-01-?? | $2.00 | $8.00 | 1,000,000 | https://pecollective.com/tools/gpt-4o-pricing/ |
+| OpenAI | GPT-4.1 Nano | 2025-01-?? | $0.10 | $0.40 | — | https://www.metacto.com/blogs/unlocking-the-true-cost-of-openai-api-a-deep-dive-into-usage-integration-and-maintenance |
+| OpenAI | GPT-5 | 2026-04-?? | $1.25 | $10.00 | 272,000 | https://www.getapipulse.com/blog-q2-2026-pricing-report.html |
+| OpenAI | GPT-5 mini | 2026-04-?? | $0.25 | $2.00 | 272,000 | https://www.getapipulse.com/blog-q2-2026-pricing-report.html |
+| OpenAI | GPT-5.4 | 2026-04-?? | $2.50 | $15.00 | 128,000 | https://www.cloudzero.com/blog/openai-pricing/ |
+| OpenAI | GPT-5.4 Mini | 2026-04-?? | $0.75 | $4.50 | 128,000 | https://www.cloudzero.com/blog/openai-pricing/ |
+| OpenAI | GPT-5.4 Nano | 2026-04-?? | $0.20 | $1.25 | 128,000 | https://www.cloudzero.com/blog/openai-pricing/ |
+| OpenAI | GPT-5.4 Codex | 2026-04-?? | $1.75 | $14.00 | 128,000 | https://www.cloudzero.com/blog/openai-pricing/ |
+| OpenAI | GPT-5.5 | 2026-04-24 | $5.00 | $30.00 | 272,000 | https://www.metacto.com/blogs/unlocking-the-true-cost-of-openai-api-a-deep-dive-into-usage-integration-and-maintenance |
+| OpenAI | GPT-5.5 Pro | 2026-04-24 | $30.00 | $180.00 | 128,000 | https://www.metacto.com/blogs/unlocking-the-true-cost-of-openai-api-a-deep-dive-into-usage-integration-and-maintenance |
+| OpenAI | o3 | 2025-01-?? | $2.00 | $8.00 | 200,000 | https://www.metacto.com/blogs/unlocking-the-true-cost-of-openai-api-a-deep-dive-into-usage-integration-and-maintenance |
+| OpenAI | o3-mini | 2025-01-?? | $1.10 | $4.40 | 200,000 | https://www.metacto.com/blogs/unlocking-the-true-cost-of-openai-api-a-deep-dive-into-usage-integration-and-maintenance |
+| OpenAI | o3-pro | 2025-01-?? | $20.00 | $80.00 | 200,000 | https://www.metacto.com/blogs/unlocking-the-true-cost-of-openai-api-a-deep-dive-into-usage-integration-and-maintenance |
+| OpenAI | o4-mini-2025-04-16 | 2025-04-16 | $4.00 | $16.00 | — | https://developers.openai.com/api/docs/pricing |
+| OpenAI | GPT-5.6 Sol | 2026-07-09 | $5.00 | $30.00 | 1,050,000 | https://www.cloudzero.com/blog/openai-pricing/ |
+| OpenAI | GPT-5.6 Terra | 2026-07-09 | $2.00 | $12.00 | 1,050,000 | https://www.cloudzero.com/blog/openai-pricing/ |
+| OpenAI | GPT-5.6 Luna | 2026-07-09 | $0.20 | $1.20 | 1,050,000 | https://www.cloudzero.com/blog/openai-pricing/ |
+| OpenAI | chat-latest | 2026-04-?? | $5.00 | $30.00 | — | https://developers.openai.com/api/docs/pricing |
+| OpenAI | gpt-5.3-codex | 2026-04-?? | $1.75 | $14.00 | — | https://developers.openai.com/api/docs/pricing |
+| Anthropic | Claude 1 | 2023-03-14 | $11.02 | $32.68 | 9,000 | https://iapi.buzz/blog/anthropic-claude-api-pricing-history.html |
+| Anthropic | Claude 1.3 / Claude 2 | 2023-07-11 | $11.02 | $32.68 | 100,000 | https://claudearchive.com/pricing-history |
+| Anthropic | Claude Instant 1.x | 2023-07-?? | $0.80 | $2.40 | — | https://tokencost.app/blog/ai-price-index |
+| Anthropic | Claude 2.1 | 2023-11-21 | $8.00 | $24.00 | 200,000 | https://iapi.buzz/blog/anthropic-claude-api-pricing-history.html |
+| Anthropic | Claude 3 Opus | 2024-03-04 | $15.00 | $75.00 | 200,000 | https://tokencost.app/blog/ai-price-index |
+| Anthropic | Claude 3 Sonnet | 2024-03-04 | $3.00 | $15.00 | 200,000 | https://tokencost.app/blog/ai-price-index |
+| Anthropic | Claude 3 Haiku | 2024-03-04 | $0.25 | $1.25 | 200,000 | https://tokencost.app/blog/ai-price-index |
+| Anthropic | Claude 3.5 Sonnet | 2024-06-21 | $3.00 | $15.00 | 200,000 | https://claudearchive.com/pricing-history |
+| Anthropic | Claude 3.5 Haiku | 2024-10-?? | $0.80 | $4.00 | 200,000 | https://iapi.buzz/blog/anthropic-claude-api-pricing-history.html |
+| Anthropic | Claude 3.5 Sonnet (updated) | 2024-10-?? | $3.00 | $15.00 | 200,000 | https://iapi.buzz/blog/anthropic-claude-api-pricing-history.html |
+| Anthropic | Claude Opus 4 | 2025-05-?? | $15.00 | $75.00 | 200,000 | https://tokencost.app/blog/ai-price-index |
+| Anthropic | Claude Sonnet 4 | 2025-09-?? | $3.00 | $15.00 | 200,000 | https://tokencost.app/blog/ai-price-index |
+| Anthropic | Claude Opus 4.5 | 2025-11-24 | $5.00 | $25.00 | 200,000 | https://claudearchive.com/pricing-history |
+| Anthropic | Claude Sonnet 4.5 | 2025-09-29 | $3.00 | $15.00 | 200,000 | https://claudearchive.com/pricing-history |
+| Anthropic | Claude Opus 4.6 | 2026-03-13 | $5.00 | $25.00 | 1,000,000 | https://apiscout.dev/guides/llm-api-pricing-comparison-2026 |
+| Anthropic | Claude Sonnet 4.6 | 2026-03-13 | $3.00 | $15.00 | 1,000,000 | https://apiscout.dev/guides/llm-api-pricing-comparison-2026 |
+| Anthropic | Claude Haiku 4.5 | 2026-03-13 | $1.00 | $5.00 | 200,000 | https://www.cloudzero.com/blog/claude-pricing/ |
+| Anthropic | Claude Sonnet 5 | 2026-08-11 | $2.00 | $10.00 | 1,000,000 | https://www.cloudzero.com/blog/claude-pricing/ |
+| Anthropic | Claude Opus 5 | 2026-08-?? | $5.00 | $25.00 | 1,000,000 | https://www.cloudzero.com/blog/claude-pricing/ |
+| Anthropic | Claude Fable 5 | 2026-08-?? | $10.00 | $50.00 | 1,000,000 | https://www.cloudzero.com/blog/claude-pricing/ |
+| Google / Gemini | Gemini 1.0 Pro | 2023-12-06 | $0.50 | $1.50 | 32,768 | https://tokencost.app/blog/ai-price-index |
+| Google / Gemini | Gemini 1.5 Pro | 2024-02-01 | $1.25 | $5.00 | 128,000 | https://tokencost.app/blog/ai-price-index |
+| Google / Gemini | Gemini 1.5 Flash | 2024-02-01 | $0.35 | $0.53 | 128,000 | https://tokencost.app/blog/ai-price-index |
+| Google / Gemini | Gemini 2.0 Flash | 2025-12-01 | $0.10 | $0.40 | 1,000,000 | https://tokencost.app/blog/ai-price-index |
+| Google / Gemini | Gemini 2.0 Flash-Lite | 2025-12-?? | $0.07 | $0.30 | 1,000,000 | https://apiscout.dev/guides/llm-api-pricing-comparison-2026 |
+| Google / Gemini | Gemini 2.5 Pro | 2025-06-?? | $1.25 | $10.00 | 1,000,000 | https://www.getapipulse.com/blog-q2-2026-pricing-report.html |
+| Google / Gemini | Gemini 2.5 Flash | 2025-06-?? | $0.30 | $2.50 | 1,000,000 | https://ai.google.dev/gemini-api/docs/pricing |
+| Google / Gemini | Gemini 2.5 Flash-Lite | 2025-06-?? | $0.10 | $0.40 | 1,000,000 | https://ai.google.dev/gemini-api/docs/pricing |
+| Google / Gemini | Gemini 3.1 Pro Preview | 2026-04-?? | $2.00 | $12.00 | 2,000,000 | https://ai.google.dev/gemini-api/docs/pricing |
+| Google / Gemini | Gemini 3 Flash Preview | 2026-04-?? | $0.50 | $3.00 | 1,000,000 | https://ai.google.dev/gemini-api/docs/pricing |
+| Google / Gemini | Gemini 3.5 Flash | 2026-05-19 | $1.50 | $9.00 | 1,000,000 | https://www.metacto.com/blogs/the-true-cost-of-google-gemini-a-guide-to-api-pricing-and-integration |
+| Google / Gemini | Gemini 3.1 Flash-Lite | 2026-04-?? | $0.25 | $1.50 | 1,000,000 | https://ai.google.dev/gemini-api/docs/pricing |
+| Google / Gemini | Gemini 3.8 Flash | 2026-04-?? | $0.75 | $3.75 | 1,000,000 | https://ai.google.dev/gemini-api/docs/pricing |
+| DeepSeek | DeepSeek V2 | 2023-12-01 | $0.14 | $0.28 | 128,000 | https://deploybase.ai/articles/llm-pricing-history-how-costs-dropped-99-since-2023 |
+| DeepSeek | DeepSeek V3 | 2024-12-01 | $0.27 | $1.10 | 128,000 | https://tokencost.app/blog/ai-price-index |
+| DeepSeek | DeepSeek V3.2 | 2025-12-?? | $0.28 | $0.42 | 128,000 | https://apiscout.dev/guides/llm-api-pricing-comparison-2026 |
+| DeepSeek | DeepSeek R1 | 2025-01-?? | $0.55 | $2.19 | 128,000 | https://apiscout.dev/guides/llm-api-pricing-comparison-2026 |
+| DeepSeek | DeepSeek V4 Pro | 2026-01-01 | $0.66 | $1.98 | 1,000,000 | https://chatforest.com/guides/llm-api-pricing-comparison-2026/ |
+| DeepSeek | DeepSeek V4 Flash | 2026-01-01 | $0.22 | $0.28 | 1,000,000 | https://www.getapipulse.com/blog-state-of-llm-pricing-may-2026.html |
+| xAI / Grok | Grok 3 | 2025-04-01 | $3.00 | $15.00 | 128,000 | https://apiscout.dev/guides/llm-api-pricing-comparison-2026 |
+| xAI / Grok | Grok 3 Mini | 2026-04-?? | $3.00 | $5.00 | 128,000 | https://www.getapipulse.com/blog-q2-2026-pricing-report.html |
+| xAI / Grok | Grok 4.3 | 2026-05-?? | $0.20 | $0.80 | 2,000,000 | https://chatforest.com/guides/llm-api-pricing-comparison-2026/ |
+| xAI / Grok | Grok Build 0.1 | 2026-05-?? | $1.00 | $2.00 | 256,000 | https://chatforest.com/guides/llm-api-pricing-comparison-2026/ |
+
+---
+
+## 8. Market data
+
+See `kb/market_data.md` for the full dataset with source URLs. Key numbers below:
+
+### Market sizing
+
+| Metric | Value | Year |
+|--------|-------|------|
+| AI market size | $390.9 billion | 2025 |
+| AI market size (projected) | $539.5 billion | 2026 |
+| AI market size (projected) | $3,497.3 billion | 2033 |
+| CAGR (2026–2033) | 30.2% | — |
+
+### Enterprise spend
+
+| Metric | Value | Period |
+|--------|-------|--------|
+| Enterprise LLM spend | $3.5 billion | Late 2024 |
+| Enterprise LLM spend | $8.4 billion | Mid 2025 |
+| AI-native software budget share | 2.3% | January 2025 |
+| AI-native software budget share | 4.8% | July 2026 |
+
+### Token volume
+
+| Provider | Volume | Period |
+|----------|--------|--------|
+| Google Gemini | 9.7 trillion tokens/month | ~2023 |
+| Google Gemini | 3.2 quadrillion tokens/month | 2026 |
+| Google Gemini growth | ~330x in 2 years | 2023 → 2026 |
+
+### Infrastructure investment
+
+| Metric | Value | Year |
+|--------|-------|------|
+| Big 4 hyperscaler AI capex | $370B–$410B | 2025 |
+| Big 4 hyperscaler AI capex (projected) | $650B | 2026 |
+| Broader AI infrastructure run-rate | approaching $1 trillion | 2026 |
+| Total AI infrastructure forecast | $6.3 trillion | 2030 |
+
+### Price dynamics summary
+
+- Frontier model output price: **$60/M tokens** (GPT-4, March 2023) → **$15/M tokens** (GPT-5.4, 2026) = **4x reduction** at the frontier.
+- Conservative estimate: ~**100x** reduction at frontier tier and **500x+** at budget tier from 2023 to 2025.
+- Token price collapse: **95%+ in 3 years** (2023–2026).
+- DeepSeek V3 output: **$0.14/M tokens** vs GPT-4 launch $60/M — roughly **100x cheaper** for frontier-quality output.
+- Price decline rates (Epoch AI): **9x annually** for basic models, **900x** for top-tier (2021–2025).
+
+---
+
+## 9. Sources
+
+### Provider pricing pages (canonical)
+
+- **OpenAI:** https://developers.openai.com/api/docs/pricing
+- **Anthropic:** https://platform.claude.com/docs/en/about-claude/pricing
+- **Google Gemini:** https://ai.google.dev/gemini-api/docs/pricing
+- **DeepSeek:** https://api-docs.deepseek.com/quick_start/pricing/
+- **xAI:** https://docs.x.ai/developers/pricing
+
+### Aggregators (used for historical price points and cross-provider comparison)
+
+- CloudZero (OpenAI): https://www.cloudzero.com/blog/openai-pricing/
+- CloudZero (Claude): https://www.cloudzero.com/blog/claude-pricing/
+- Metacto (Gemini): https://www.metacto.com/blogs/the-true-cost-of-google-gemini-a-guide-to-api-pricing-and-integration
+- Metacto (OpenAI): https://www.metacto.com/blogs/unlocking-the-true-cost-of-openai-api-a-deep-dive-into-usage-integration-and-maintenance
+- IntuitionLabs (LLM comparison): https://intuitionlabs.ai/articles/llm-api-pricing-comparison-2025
+- TokenCost (AI Price Index): https://tokencost.app/blog/ai-price-index
+- APIScout (LLM comparison): https://apiscout.dev/guides/llm-api-pricing-comparison-2026
+- ChatForest (LLM comparison): https://chatforest.com/guides/llm-api-pricing-comparison-2026/
+- DeployBase (cost-per-token over time): https://deploybase.ai/articles/cost-per-token-over-time-how-llm-api-pricing-has-dropped
+- DeployBase (LLM pricing history): https://deploybase.ai/articles/llm-pricing-history-how-costs-dropped-99-since-2023
+- TokenMix (AI API pricing history): https://tokenmix.ai/blog/ai-pricing-trends-history
+- iapi.buzz (Anthropic pricing history): https://iapi.buzz/blog/anthropic-claude-api-pricing-history.html
+- claudearchive.com (Claude pricing history): https://claudearchive.com/pricing-history
+- kickllm (LLM pricing history): https://kickllm.com/research/llm-pricing-history.html
+
+### Market data (analysts and research)
+
+- Grand View Research (AI market): https://www.grandviewresearch.com/industry-analysis/artificial-intelligence-ai-market
+- Tropic AI pricing trends: https://www.tropicapp.io/blog/ai-pricing-trends
+- Zylo (AI cost): https://zylo.com/blog/ai-cost
+- Josh Bersin (AI pricing / infrastructure): https://joshbersin.com/2026/05/ai-prices-are-going-up-up-up-and-what-this-means-for-enterprise-ai
+- IEEE Spectrum (Stanford AI Index 2026): https://spectrum.ieee.org/state-of-ai-index-2026
+- Token price collapse (Substack): https://thegtmnewsletter.substack.com/p/ai-token-price-collapse-costs-rising
+- Coding Nexus (AI costs going down): https://medium.com/coding-nexus/ai-costs-are-going-down-where-is-market-going-abb054a6715a
+- Anthropic Economic Index (March 2026): https://www.anthropic.com/research/economic-index-march-2026-report
+- White House CEA report (Great Divergence): https://www.whitehouse.gov/wp-content/uploads/2026/01/Artificial-Intelligence-and-the-Great-Divergence-5.pdf
+
+---
+
+*Report generated from `kb/price_points_*.jsonl` by `scripts/generate_report.py`. All price points include source URLs and effective dates. See `kb/CONVENTIONS.md` and `kb/PRICE_POINTS_SPEC.md` for data-quality rules.*
