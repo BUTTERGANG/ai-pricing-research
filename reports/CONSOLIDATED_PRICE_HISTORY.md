@@ -1,6 +1,6 @@
 # AI Pricing Research — Consolidated Report
 
-**Generated:** 2026-09-07 — from `kb/price_points_*.jsonl` (116 entries across 5 providers)
+**Generated:** 2026-09-07 — from `kb/price_points_*.jsonl` (216 entries across 11 providers)
 
 ---
 
@@ -20,6 +20,7 @@
 - [12. Cross-provider comparison — current prices (late 2026 snapshot)](#12-cross-provider-comparison--current-prices-late-2026-snapshot)
 - [13. Market data](#13-market-data)
 - [14. Sources](#14-sources)
+- [15. OpenRouter free model availability dashboard (live snapshot)](#15-openrouter-free-model-availability-dashboard-live-snapshot)
 
 ---
 
@@ -593,6 +594,49 @@ See `kb/market_data.md` for the full dataset with source URLs. Key numbers below
 - Coding Nexus (AI costs going down): https://medium.com/coding-nexus/ai-costs-are-going-down-where-is-market-going-abb054a6715a
 - Anthropic Economic Index (March 2026): https://www.anthropic.com/research/economic-index-march-2026-report
 - White House CEA report (Great Divergence): https://www.whitehouse.gov/wp-content/uploads/2026/01/Artificial-Intelligence-and-the-Great-Divergence-5.pdf
+
+---
+
+
+## 15. OpenRouter free model availability dashboard (live snapshot)
+
+This dashboard is a focused view of the **OpenRouter free-tier (`:free`) models** captured in the KB. It runs from the same `kb/price_points_openrouter_free.jsonl` file as the per-model history above — the difference is presentation: here the focus is on **current reachability, status, and what to do when a model is gone**.
+
+**Important caveats baked into the data model:**
+
+- **Rotation is expected.** OpenRouter `:free` models appear, get throttled, get taken down, or get replaced without much notice. A model that is `working` today can be `rate_limited_429` tomorrow. Treat every row as a snapshot, not a guarantee.
+- **`first_seen` and `last_seen` matter more than `effective_date`.** These models don't have a clean launch date — they surface, disappear, come back. The KB tracks when they were first and last confirmed via API probe, so you can tell how stale a status is.
+- **Stealth models often surface here first.** OpenRouter frequently lists preview/beta/stealth models before they are publicly announced. Some will be promoted to paid, some will be removed quietly, and some will stick around. The dashboard captures them as they appear so you can watch what happens — but don't assume any stealth entry is stable.
+- **The `:free` suffix is real.** When OpenRouter publishes a free model, the published model ID in the `source_url` includes the literal `:free` suffix (e.g. `nvidia/nemotron-3-ultra-550b-a55b:free`). That's the real, callable ID — not a display-only label. The same model name without `:free` may be a different (paid) product.
+
+### Current availability table
+
+| Model | Provider | Context | Status | Last seen | Re-check? | Resolution strategy |
+|-------|----------|---------|--------|-----------|-----------|---------------------|
+| Nvidia Nemotron 3 Ultra 550B A55B | OpenRouter | 1,000,000 | working | 2026-09-07T15:23:00Z | Reliable. Use as primary free option. Re-check weekly to confirm still reachable. |
+| Nvidia Nemotron 3 Super 120B A12B | OpenRouter | 262,144 | working | 2026-09-07T14:45:00Z | Reliable. Use as primary free option. Re-check weekly to confirm still reachable. |
+| Nvidia Nemotron 3 Nano Omni 30B A3B Reasoning | OpenRouter | 256,000 | working | 2026-09-07T15:23:00Z | Reliable. Use as primary free option. Re-check weekly to confirm still reachable. |
+| Nvidia Nemotron 3.5 Lightning | OpenRouter | 1,000,000 | rate_limited_429 | 2026-09-07T15:23:00Z | Not usable right now (throttled). Try again off-hours or later. If it stays 429, move to the next working Nemotron. Re-check every few days — launch throttling often relaxes. |
+| Google Gemma 4 31B Instruct | OpenRouter | 1,000,000 | rate_limited_429 | 2026-09-07T14:45:00Z | Not usable right now (throttled). Try again off-hours or later. If it stays 429, move to the next working Nemotron. Re-check every few days — launch throttling often relaxes. |
+| Google Gemma 4 26B A4B Instruct | OpenRouter | 1,000,000 | rate_limited_429 | 2026-09-07T15:23:00Z | Not usable right now (throttled). Try again off-hours or later. If it stays 429, move to the next working Nemotron. Re-check every few days — launch throttling often relaxes. |
+| Poolside Laguna S 2.1 | OpenRouter | — | rate_limited_429 | 2026-09-07T15:23:00Z | Not usable right now (throttled). Try again off-hours or later. If it stays 429, move to the next working Nemotron. Re-check every few days — launch throttling often relaxes. |
+| Thinking Machines Inkling | OpenRouter | 1,000,000 | access_gated_403 | 2026-09-07T14:45:00Z | Not freely callable (403). Requires separate app approval / agentic harness. If you can get approved, re-test. Otherwise treat as unavailable for now. |
+| Inclusive AI Ling 3.0 Flash Fin | OpenRouter | — | empty_content | 2026-09-07T14:45:00Z | Accepts requests but returns no usable content. Model may be broken, incomplete, ethics-filtered, or still deploying. Re-check in a day or two; if still empty, drop it. |
+| Inclusion AI Ling Flash | OpenRouter | — | empty_content | 2026-09-07T15:23:00Z | Accepts requests but returns no usable content. Model may be broken, incomplete, ethics-filtered, or still deploying. Re-check in a day or two; if still empty, drop it. |
+| Cohere North Mini Code | OpenRouter | — | empty_content | 2026-09-07T14:45:00Z | Accepts requests but returns no usable content. Model may be broken, incomplete, ethics-filtered, or still deploying. Re-check in a day or two; if still empty, drop it. |
+| Dots Studio Dots 3 Note Preview | OpenRouter | — | empty_content | 2026-09-07T15:23:00Z | Accepts requests but returns no usable content. Model may be broken, incomplete, ethics-filtered, or still deploying. Re-check in a day or two; if still empty, drop it. |
+| OpenRouter Free Router | OpenRouter | — | empty_content | 2026-09-07T14:45:00Z | Accepts requests but returns no usable content. Model may be broken, incomplete, ethics-filtered, or still deploying. Re-check in a day or two; if still empty, drop it. |
+
+### What to do when a model disappears
+
+1. **Check `last_seen` vs `retrieved_at`.** If the last successful probe is days or weeks old, the model may have rotated out. If it's recent, try again — 429s fluctuate.
+2. **Cross-reference the provider's model page** (the `source_url` is in the data row). If the page itself is gone or the model is no longer listed, it's gone.
+3. **Watch for stealth → paid transitions.** A model that appears as a `:free` preview sometimes gets promoted to a paid tier later. When that happens, the free entry becomes stale — update the status and note the new paid equivalent if there is one.
+4. **Don't hardcode `:free` model IDs in production without a fallback.** Free models are volatile by nature. If you rely on one, have a paid fallback (same vendor or a cheaper equivalent) ready in case it disappears or starts 429-ing.
+
+### How to refresh this dashboard
+
+Re-probe each model ID with a real API call, update the `status`, `last_seen`, and `status_history` fields in `kb/price_points_openrouter_free.jsonl`, then re-run `python3 scripts/generate_report.py`. The dashboard section reads from the same file, so a single data update refreshes both the per-model history and the availability table.
 
 ---
 

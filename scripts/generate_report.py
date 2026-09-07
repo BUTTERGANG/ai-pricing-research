@@ -34,7 +34,7 @@ records = load_all()
 report = []
 report.append("# AI Pricing Research — Consolidated Report")
 report.append("")
-report.append("**Generated:** 2026-09-07 — from `kb/price_points_*.jsonl` (116 entries across 5 providers)")
+report.append(f"**Generated:** 2026-09-07 — from `kb/price_points_*.jsonl` ({len(records)} entries across {len(set(r.get('_provider_file') for r in records))} providers)")
 report.append("")
 report.append("---")
 report.append("")
@@ -271,7 +271,7 @@ report.append("")
 
 # ── Free model availability dashboard ──────────────────────────────────────
 section_num += 1
-report.append(f"## {section_num}. OpenRouter free model availability dashboard (live snapshot)")
+report.append(f"## 15. OpenRouter free model availability dashboard (live snapshot)")
 
 report.append("")
 report.append("This dashboard is a focused view of the **OpenRouter free-tier (`:free`) models** captured in the KB. It runs from the same `kb/price_points_openrouter_free.jsonl` file as the per-model history above — the difference is presentation: here the focus is on **current reachability, status, and what to do when a model is gone**.")
