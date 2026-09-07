@@ -54,6 +54,7 @@ report.append("- [11. OpenRouter Free Models pricing history](#11-openrouter-fre
 report.append("- [12. Cross-provider comparison — current prices (late 2026 snapshot)](#12-cross-provider-comparison--current-prices-late-2026-snapshot)")
 report.append("- [13. Market data](#13-market-data)")
 report.append("- [14. Sources](#14-sources)")
+report.append("- [15. OpenRouter free model availability dashboard (live snapshot)](#15-openrouter-free-model-availability-dashboard-live-snapshot)")
 report.append("")
 report.append("---")
 report.append("")
@@ -266,7 +267,75 @@ report.append("- White House CEA report (Great Divergence): https://www.whitehou
 report.append("")
 report.append("---")
 report.append("")
-report.append("*Report generated from `kb/price_points_*.jsonl` by `scripts/generate_report.py`. All price points include source URLs and effective dates. See `kb/CONVENTIONS.md` and `kb/PRICE_POINTS_SPEC.md` for data-quality rules.*")
+report.append("")
+
+# ── Free model availability dashboard ──────────────────────────────────────
+section_num += 1
+report.append(f"## {section_num}. OpenRouter free model availability dashboard (live snapshot)")
+
+report.append("")
+report.append("This dashboard is a focused view of the **OpenRouter free-tier (`:free`) models** captured in the KB. It runs from the same `kb/price_points_openrouter_free.jsonl` file as the per-model history above — the difference is presentation: here the focus is on **current reachability, status, and what to do when a model is gone**.")
+report.append("")
+report.append("**Important caveats baked into the data model:**")
+report.append("")
+report.append("- **Rotation is expected.** OpenRouter `:free` models appear, get throttled, get taken down, or get replaced without much notice. A model that is `working` today can be `rate_limited_429` tomorrow. Treat every row as a snapshot, not a guarantee.")
+report.append("- **`first_seen` and `last_seen` matter more than `effective_date`.** These models don't have a clean launch date — they surface, disappear, come back. The KB tracks when they were first and last confirmed via API probe, so you can tell how stale a status is.")
+report.append("- **Stealth models often surface here first.** OpenRouter frequently lists preview/beta/stealth models before they are publicly announced. Some will be promoted to paid, some will be removed quietly, and some will stick around. The dashboard captures them as they appear so you can watch what happens — but don't assume any stealth entry is stable.")
+report.append("- **The `:free` suffix is real.** When OpenRouter publishes a free model, the published model ID in the `source_url` includes the literal `:free` suffix (e.g. `nvidia/nemotron-3-ultra-550b-a55b:free`). That's the real, callable ID — not a display-only label. The same model name without `:free` may be a different (paid) product.")
+report.append("")
+
+report.append("### Current availability table")
+
+report.append("")
+report.append("| Model | Provider | Context | Status | Last seen | Re-check? | Resolution strategy |")
+report.append("|-------|----------|---------|--------|-----------|-----------|---------------------|")
+
+for r in records:
+    if r.get("_provider_file") != "openrouter_free":
+        continue
+    model = r.get("model_name", "—")
+    ctx = fmt_ctx(r.get("context_window_tokens"))
+    status = r.get("status", "—")
+    last = r.get("last_seen", "—")
+    retrieved = r.get("retrieved_at", "—")
+    notes = r.get("notes", "—") or ""
+
+    # Resolution strategy by status
+    if status == "working":
+        strategy = "Reliable. Use as primary free option. Re-check weekly to confirm still reachable."
+    elif status == "rate_limited_429":
+        strategy = ("Not usable right now (throttled). Try again off-hours or later. "
+                    "If it stays 429, move to the next working Nemotron. Re-check every few days — "
+                    "launch throttling often relaxes.")
+    elif status == "access_gated_403":
+        strategy = ("Not freely callable (403). Requires separate app approval / agentic harness. "
+                    "If you can get approved, re-test. Otherwise treat as unavailable for now.")
+    elif status == "empty_content":
+        strategy = ("Accepts requests but returns no usable content. Model may be broken, incomplete, "
+                    "ethics-filtered, or still deploying. Re-check in a day or two; if still empty, drop it.")
+    else:
+        strategy = "Unknown status — re-test."
+
+    report.append(f"| {model} | OpenRouter | {ctx} | {status} | {last} | {strategy} |")
+report.append("")
+report.append("### What to do when a model disappears")
+report.append("")
+report.append("1. **Check `last_seen` vs `retrieved_at`.** If the last successful probe is days or weeks old, the model may have rotated out. If it's recent, try again — 429s fluctuate.")
+report.append("2. **Cross-reference the provider's model page** (the `source_url` is in the data row). If the page itself is gone or the model is no longer listed, it's gone.")
+report.append("3. **Watch for stealth → paid transitions.** A model that appears as a `:free` preview sometimes gets promoted to a paid tier later. When that happens, the free entry becomes stale — update the status and note the new paid equivalent if there is one.")
+report.append("4. **Don't hardcode `:free` model IDs in production without a fallback.** Free models are volatile by nature. If you rely on one, have a paid fallback (same vendor or a cheaper equivalent) ready in case it disappears or starts 429-ing.")
+report.append("")
+report.append("### How to refresh this dashboard")
+report.append("")
+report.append("Re-probe each model ID with a real API call, update the `status`, `last_seen`, and `status_history` fields in `kb/price_points_openrouter_free.jsonl`, then re-run `python3 scripts/generate_report.py`. The dashboard section reads from the same file, so a single data update refreshes both the per-model history and the availability table.")
+report.append("")
+report.append("---")
+report.append("")
+report.append(
+    "*Report generated from `kb/price_points_*.jsonl` by `scripts/generate_report.py`. "
+    "All price points include source URLs and effective dates. See `kb/CONVENTIONS.md` and "
+    "`kb/PRICE_POINTS_SPEC.md` for data-quality rules.*"
+)
 
 report_text = "\n".join(report)
 
